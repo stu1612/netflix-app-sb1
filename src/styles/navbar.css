@@ -5,11 +5,11 @@
   width: 100%;
   height: auto;
   z-index: 10;
-  padding-top: 20px;
 }
 
 .navbar-content {
   margin: 0 3.5rem;
+  height: 90px;
   display: flex;
   justify-content: space-between;
   align-items: center;

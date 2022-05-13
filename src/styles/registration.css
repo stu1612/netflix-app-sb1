@@ -1,13 +1,62 @@
 #registration {
   width: 100%;
-  min-height: 100vh;
+  min-height: 90vh;
   height: 100%;
   overflow: hidden;
+  border-top: 1px solid #ececec;
+  position: absolute;
+  top: 90px;
 }
 
 .registration {
-  width: min(95%, 760px);
+  width: min(95%, 340px);
   margin: 0 auto;
-  padding: 10rem 0;
-  background-color: red;
+  padding: 10rem 2rem;
+  text-align: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.device-icons {
+  background-image: url("../assets/images/devices.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 2rem;
+  width: 100%;
+  height: 100px;
+}
+
+.step-indicator {
+  font-size: 13px;
+  line-height: 19px;
+  text-transform: uppercase;
+  font-family: NetflixRegular, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+.bolder {
+  font-weight: 800;
+}
+
+.registration-title {
+  font-family: NetflixRegular, Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.register-body {
+  padding: 1rem 0;
+}
+
+.register-body p {
+  font-size: 18px;
+  font-family: NetflixRegular, Arial, Helvetica, sans-serif;
+}
+
+.submit-btn-container {
+  display: flex;
+  justify-content: center;
 }
