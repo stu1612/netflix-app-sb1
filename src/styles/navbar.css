@@ -1,0 +1,25 @@
+.navbar {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+  z-index: 10;
+  padding-top: 20px;
+}
+
+.navbar-content {
+  margin: 0 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 2.75rem;
+}
+
+.navbar-logo img {
+  width: auto;
+  height: 100%;
+}

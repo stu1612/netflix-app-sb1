@@ -1,0 +1,13 @@
+#registration {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  overflow: hidden;
+}
+
+.registration {
+  width: min(95%, 760px);
+  margin: 0 auto;
+  padding: 10rem 0;
+  background-color: red;
+}

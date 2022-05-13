@@ -1,5 +1,5 @@
 // npm
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -7,6 +7,10 @@ export default function Login() {
     <div>
       Login
       <button onClick={() => navigate(-1)}>Go back</button>
+      <div>
+        <p>Did you forget your password?</p>
+        <Link to="/recover-password">Recover password</Link>
+      </div>
     </div>
   );
 }

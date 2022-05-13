@@ -1,5 +1,12 @@
-import React from "react";
+// npm
+import { useNavigate } from "react-router-dom";
 
 export default function RecoverPassword() {
-  return <div>RecoverPassword</div>;
+  const navigate = useNavigate();
+  return (
+    <div>
+      Recover Password
+      <button onClick={() => navigate(-1)}>Go back</button>
+    </div>
+  );
 }

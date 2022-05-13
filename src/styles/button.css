@@ -1,0 +1,14 @@
+.cta-red {
+  background-color: #e50914;
+  line-height: normal;
+  padding: 7px 17px;
+  font-weight: 400;
+  font-size: 1rem;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  font-family: "NetflixRegular";
+  font-weight: 200;
+  letter-spacing: 0.7px;
+  cursor: pointer;
+}
