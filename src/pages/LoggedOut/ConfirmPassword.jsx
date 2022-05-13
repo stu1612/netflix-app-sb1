@@ -1,6 +1,12 @@
-import React from "react";
+// npm
+import { useContext } from "react";
+
+// files
+import { AuthContext } from "../../contexts/AuthContext";
 
 export default function ConfirmPassword() {
+  // global state
+  const { isEmail, setIsEmail } = useContext(AuthContext);
   return (
     <div className="registration">
       <div className="register-header">
@@ -12,9 +18,13 @@ export default function ConfirmPassword() {
         <p>We also hate paperwork.</p>
       </div>
       <div className="register-form">
-        <form action="">
-          <input type="text" placeholder="E-mail" />
-          <input type="text" placeholder="Password" />
+        <form>
+          <input
+            type="text"
+            value={isEmail}
+            onChange={(event) => setIsEmail(event.target.value)}
+          />
+          <input type="password" placeholder="Password" />
 
           <div className="email-preference">
             <input type="checkbox" name="" id="" />

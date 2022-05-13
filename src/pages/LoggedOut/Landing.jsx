@@ -1,7 +1,26 @@
 // npm
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import InputField from "../../components/InputField";
+
+// files
+import { AuthContext } from "../../contexts/AuthContext";
+import form from "../../data/email.json";
+import validateString from "../../scripts/validateString";
+import validateEmail from "../../scripts/validateEmail";
 
 export default function Landing() {
+  // global state
+  const { isEmail, setIsEmail } = useContext(AuthContext);
+
+  // properties
+  const navigate = useNavigate();
+
+  function emailIsValid(event) {
+    event.preventDefault();
+    isEmail && navigate("/signup/regform");
+  }
+
   return (
     <section id="hero">
       <div className="hero-landing">
@@ -13,12 +32,16 @@ export default function Landing() {
             reactivate an account.
           </p>
           <div className="email-form">
-            <form>
-              <input type="text" />
-              <Link to="/signup/registration" className="bta cta">
+            <form onSubmit={emailIsValid}>
+              <InputField
+                setup={form.email}
+                state={[isEmail, setIsEmail]}
+                validation={validateEmail}
+              />
+              <button className="bta cta">
                 <span>Get started</span>
                 <span>></span>
-              </Link>
+              </button>
             </form>
           </div>
         </div>

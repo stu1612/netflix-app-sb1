@@ -54,3 +54,10 @@
   letter-spacing: 0.5px;
   font-weight: 500;
 }
+
+/* forms */
+
+.email-form {
+  background-color: white;
+  padding: 2rem;
+}
