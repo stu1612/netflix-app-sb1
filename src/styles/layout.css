@@ -11,4 +11,5 @@ body {
   font-size: 16px;
   direction: ltr;
   -webkit-font-smoothing: antialiased;
+  font-family: "NetflixRegular";
 }

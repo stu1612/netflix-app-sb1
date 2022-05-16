@@ -6,7 +6,7 @@
     "required": true
   },
   "username": {
-    "label": "User name",
+    "label": "Username",
     "autoFocus": false,
     "type": "text",
     "required": true

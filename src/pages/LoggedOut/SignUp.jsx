@@ -13,6 +13,7 @@ import InputField from "../../components/InputField";
 import form from "../../data/signUp.json";
 import validateEmail from "../../scripts/validateEmail";
 import validateString from "../../scripts/validateString";
+import AuthModalErrorMessage from "../../components/AuthModalErrorMessage";
 
 export default function SignUp() {
   // properties
@@ -61,7 +62,7 @@ export default function SignUp() {
     const message = firebaseErrors[error.code] || firebaseErrors["default"];
 
     console.error(error.code);
-    setIsModal(message);
+    setIsModal(<AuthModalErrorMessage message={message} />);
   }
 
   return (
@@ -79,7 +80,7 @@ export default function SignUp() {
           <InputField
             setup={form.email}
             state={[newEmail, setNewEmail]}
-            validation={validateEmail}
+            // validation={validateEmail}
           />
           <InputField
             setup={form.username}
@@ -105,8 +106,8 @@ export default function SignUp() {
           <input
             type="text"
             placeholder="name"
-            value={name}
-            onChange={(event) => setName(event.target.value)}
+            value={username}
+            onChange={(event) => setUsername(event.target.value)}
           /> */}
 
           <div className="email-preference">

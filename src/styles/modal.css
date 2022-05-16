@@ -14,7 +14,7 @@
 .modal-content {
   border-radius: 5px;
   width: min(95%, 760px);
-  height: 95%;
+  padding: 5rem;
   background-color: rgb(21, 21, 21);
   color: #fff;
   display: flex;
