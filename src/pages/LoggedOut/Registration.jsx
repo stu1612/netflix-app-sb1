@@ -1,9 +1,13 @@
 // npm
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 // images
 // import icons from "../../assets/images/devices.png";
 
 export default function Registration() {
+  const location = useLocation();
+
+  const email = location.state.data[0];
+
   return (
     <section id="registration">
       <div className="registration">
@@ -24,7 +28,11 @@ export default function Registration() {
           </p>
         </div>
         <div className="submit-btn-container">
-          <Link to="/signup/regform" className="btn-primary">
+          <Link
+            to="/signup/regform"
+            className="btn-primary"
+            state={{ data: email }}
+          >
             Next
           </Link>
         </div>
