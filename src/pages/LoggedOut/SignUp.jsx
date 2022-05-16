@@ -13,7 +13,6 @@ export default function SignUp() {
   // properties
   const location = useLocation();
   const email = location.state.data;
-  console.log(email);
 
   // global state
   const { setUID, isEmail, setIsEmail } = useContext(AuthContext);
