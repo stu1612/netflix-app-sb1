@@ -4,10 +4,15 @@ import { useLocation } from "react-router-dom";
 
 // files
 import { AuthContext } from "../../contexts/AuthContext";
+import { ModalContext } from "../../contexts/ModalContext";
 // import ConfirmPassword from "../../components/ConfirmPassword";
 import { createUser } from "../../firebase/fireAuth";
 import { createDocumentWithId } from "../../firebase/fireStore";
-// import firebaseErrors from "../../data/firebaseError.json";
+import firebaseErrors from "../../data/firebaseError.json";
+import InputField from "../../components/InputField";
+import form from "../../data/signUp.json";
+import validateEmail from "../../scripts/validateEmail";
+import validateString from "../../scripts/validateString";
 
 export default function SignUp() {
   // properties
@@ -15,105 +20,48 @@ export default function SignUp() {
   const email = location.state.data;
 
   // global state
-  const { setUID, isEmail, setIsEmail } = useContext(AuthContext);
+  const { setUID } = useContext(AuthContext);
+  const { setIsModal } = useContext(ModalContext);
 
   // local state
-  const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
   const [newEmail, setNewEmail] = useState(email);
-
-  //   async function onSignUp(event) {
-  //     event.preventDefault();
-
-  //     const uid = await createUID().catch(onFail);
-  //     let user;
-
-  //     if (uid) user = await createDocument(uid).catch(onFail);
-  //     if (user) onSuccess(uid);
-  //   }
-
-  //   async function createUID() {
-  //     const uid = await createUser(email, password);
-
-  //     return uid;
-  //   }
-
-  //   async function createDocument(uid) {
-  //     const user = { name: name };
-  //     const document = await createDocumentWithId("users", uid, user);
-
-  //     return document;
-  //   }
-
-  //   function onSuccess(uid) {
-  //     setUID(uid);
-  //     // navigation("/dashboard");
-  //   }
-
-  //   function onFail(error) {
-  //     const message = firebaseErrors[error.code] || firebaseErrors["default"];
-
-  //     console.error(error.code);
-  //     alert(message);
-  //   }
-
-  //   TEST 2
-  //   async function onSignUp(event) {
-  //     event.preventDefault();
-
-  //     const uid = await createUID();
-  //     let user;
-
-  //     if (uid) user = await createDocument(uid);
-  //     if (user) onSuccess(uid);
-  //   }
-
-  //   async function createUID() {
-  //     const { data, error } = await createUser(email, password);
-
-  //     if (error) onFailure(data);
-  //     else return data;
-  //   }
-
-  //   async function createDocument(uid) {
-  //     const user = { name: name };
-  //     const { data, error } = await createDocumentWithId("users", uid, user);
-
-  //     if (error) onFailure(data);
-  //     else return data;
-  //   }
-
-  //   function onSuccess(uid) {
-  //     setUID(uid);
-  //     // navigation("/dashboard");
-  //   }
-
-  //   function onFailure(errorCode) {
-  //     const message = firebaseErrors[errorCode] || firebaseErrors["default"];
-
-  //     console.error(errorCode);
-  //     alert(message);
-  //   }
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   async function onSignUp(event) {
     event.preventDefault();
 
-    // 1 Create UID
-    const newUID = await createUser(newEmail, password);
+    const uid = await createUID().catch(onFail);
+    let user;
 
-    // 2 Create user document
-    const newUser = {
-      name: name,
-    };
-    const payload = await createDocumentWithId("users", newUID, newUser);
+    if (uid) user = await createDocument(uid).catch(onFail);
+    if (user) onSuccess(uid);
+  }
 
-    if (payload.error) {
-      console.log(payload.error);
-    } else {
-      setUID(newUID);
-      console.log(newUID);
-      //   navigate("/dashboard");
-    }
+  async function createUID() {
+    const uid = await createUser(newEmail, password);
+
+    return uid;
+  }
+
+  async function createDocument(uid) {
+    const user = { username: username };
+    const document = await createDocumentWithId("users", uid, user);
+
+    return document;
+  }
+
+  function onSuccess(uid) {
+    setUID(uid);
+    console.log(uid);
+    // navigation("/dashboard");
+  }
+
+  function onFail(error) {
+    const message = firebaseErrors[error.code] || firebaseErrors["default"];
+
+    console.error(error.code);
+    setIsModal(message);
   }
 
   return (
@@ -128,7 +76,22 @@ export default function SignUp() {
       </div>
       <div className="register-form">
         <form onSubmit={onSignUp}>
-          <input
+          <InputField
+            setup={form.email}
+            state={[newEmail, setNewEmail]}
+            validation={validateEmail}
+          />
+          <InputField
+            setup={form.username}
+            state={[username, setUsername]}
+            validation={validateString}
+          />
+          <InputField
+            setup={form.password}
+            state={[password, setPassword]}
+            validation={validateString}
+          />
+          {/* <input
             type="email"
             value={newEmail}
             onChange={(event) => setNewEmail(event.target.value)}
@@ -144,7 +107,7 @@ export default function SignUp() {
             placeholder="name"
             value={name}
             onChange={(event) => setName(event.target.value)}
-          />
+          /> */}
 
           <div className="email-preference">
             <input type="checkbox" name="" id="" />

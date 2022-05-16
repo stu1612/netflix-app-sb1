@@ -1,0 +1,20 @@
+{
+  "email": {
+    "label": "Email address",
+    "autoFocus": true,
+    "type": "email",
+    "required": true
+  },
+  "username": {
+    "label": "User name",
+    "autoFocus": false,
+    "type": "text",
+    "required": true
+  },
+  "password": {
+    "label": "Account password",
+    "autoFocus": false,
+    "type": "password",
+    "required": true
+  }
+}

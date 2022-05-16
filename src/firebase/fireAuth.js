@@ -10,31 +10,30 @@ import { authentication } from "./firebase";
 
 // TEST 1
 
-// Methods
-// export async function createUser(email, password) {
-//   const credentials = await createUserWithEmailAndPassword(
-//     authentication,
-//     email,
-//     password
-//   );
+export async function createUser(email, password) {
+  const credentials = await createUserWithEmailAndPassword(
+    authentication,
+    email,
+    password
+  );
 
-//   return credentials.user.uid;
-// }
+  return credentials.user.uid;
+}
 
-// export async function loginUser(email, password) {
-//   const credentials = await signInWithEmailAndPassword(
-//     authentication,
-//     email,
-//     password
-//   );
+export async function loginUser(email, password) {
+  const credentials = await signInWithEmailAndPassword(
+    authentication,
+    email,
+    password
+  );
 
-//   return credentials.user.uid;
-// }
+  return credentials.user.uid;
+}
 
-// export async function recoverUser(email) {
-//   await sendPasswordResetEmail(authentication, email);
-//   return "Email sent";
-// }
+export async function recoverUser(email) {
+  await sendPasswordResetEmail(authentication, email);
+  return "Email sent";
+}
 
 // TEST 2
 
@@ -124,25 +123,25 @@ import { authentication } from "./firebase";
 // }
 
 // Methods
-export async function createUser(email, password) {
-  const userCredential = await createUserWithEmailAndPassword(
-    authentication,
-    email,
-    password
-  );
+// export async function createUser(email, password) {
+//   const userCredential = await createUserWithEmailAndPassword(
+//     authentication,
+//     email,
+//     password
+//   );
 
-  return userCredential.user.uid;
-}
+//   return userCredential.user.uid;
+// }
 
-export async function loginUser(email, password) {
-  const userCredential = await signInWithEmailAndPassword(
-    authentication,
-    email,
-    password
-  );
-  return userCredential.user.uid;
-}
+// export async function loginUser(email, password) {
+//   const userCredential = await signInWithEmailAndPassword(
+//     authentication,
+//     email,
+//     password
+//   );
+//   return userCredential.user.uid;
+// }
 
-export async function recoverUser(email) {
-  await sendPasswordResetEmail(authentication, email);
-}
+// export async function recoverUser(email) {
+//   await sendPasswordResetEmail(authentication, email);
+// }

@@ -1,8 +1,0 @@
-{
-  "email": {
-    "label": "Email address",
-    "autoFocus": true,
-    "type": "email",
-    "required": true
-  }
-}

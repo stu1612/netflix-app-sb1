@@ -1,25 +1,21 @@
 // npm
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import InputField from "../../components/InputField";
 
 // files
-import { AuthContext } from "../../contexts/AuthContext";
-import form from "../../data/email.json";
+import form from "../../data/signUp.json";
 import validateString from "../../scripts/validateString";
 import validateEmail from "../../scripts/validateEmail";
 
 export default function Landing() {
   // global state
-  const { isEmail, setIsEmail } = useContext(AuthContext);
   const [email, setEmail] = useState("");
 
-  // properties
   const navigate = useNavigate();
 
-  // function emailIsValid(event) {
-  //   event.preventDefault();
-  //   isEmail && navigate("/signup/regform");
+  // function emailIsValid() {
+  //   email && navigate("/signup/registration");
   // }
 
   return (
@@ -39,14 +35,21 @@ export default function Landing() {
                 state={[email, setEmail]}
                 validation={validateEmail}
               />
-              <Link
-                className="bta cta"
-                to="/signup/registration"
-                state={{ data: email }}
-              >
-                <span>Get started</span>
-                <span>></span>
-              </Link>
+              {email ? (
+                <Link
+                  className="bta cta"
+                  state={{ data: email }}
+                  to="/signup/registration"
+                >
+                  <span>Get started</span>
+                  <span>></span>
+                </Link>
+              ) : (
+                <Link className="bta cta disbaled" to="/">
+                  <span>Get started</span>
+                  <span>></span>
+                </Link>
+              )}
             </form>
           </div>
         </div>
