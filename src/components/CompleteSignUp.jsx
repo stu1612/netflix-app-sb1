@@ -3,10 +3,17 @@ import { useContext } from "react";
 
 // files
 import { AuthContext } from "../contexts/AuthContext";
+import form from "../data/signUp.json";
+import InputField from "../components/InputField";
+import validateString from "../scripts/validateString";
 
-export default function ConfirmPassword() {
+export default function CompleteSignUp({ emailState, passState, onSignUp }) {
   // global state
-  const { isEmail, setIsEmail } = useContext(AuthContext);
+  const { username, setUsername } = useContext(AuthContext);
+
+  // local state
+  const [confirmEmail, setConfirmEmail] = emailState;
+  const [password, setPassword] = passState;
   return (
     <div className="registration">
       <div className="register-header">
@@ -18,14 +25,21 @@ export default function ConfirmPassword() {
         <p>We also hate paperwork.</p>
       </div>
       <div className="register-form">
-        <form>
-          <input
-            type="text"
-            value={isEmail}
-            onChange={(event) => setIsEmail(event.target.value)}
+        <form onSubmit={onSignUp}>
+          <InputField
+            setup={form.email}
+            state={[confirmEmail, setConfirmEmail]}
           />
-          <input type="password" placeholder="Password" />
-          <input type="name" placeholder="name" />
+          <InputField
+            setup={form.username}
+            state={[username, setUsername]}
+            validation={validateString}
+          />
+          <InputField
+            setup={form.password}
+            state={[password, setPassword]}
+            validation={validateString}
+          />
 
           <div className="email-preference">
             <input type="checkbox" name="" id="" />

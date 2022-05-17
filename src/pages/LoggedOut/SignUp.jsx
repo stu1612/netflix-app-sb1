@@ -4,16 +4,12 @@ import { useLocation } from "react-router-dom";
 
 // files
 import { AuthContext } from "../../contexts/AuthContext";
-import { ModalContext } from "../../contexts/ModalContext";
-// import ConfirmPassword from "../../components/ConfirmPassword";
-import { createUser } from "../../firebase/fireAuth";
 import { createDocumentWithId } from "../../firebase/fireStore";
-import firebaseErrors from "../../data/firebaseError.json";
-import InputField from "../../components/InputField";
-import form from "../../data/signUp.json";
-import validateEmail from "../../scripts/validateEmail";
-import validateString from "../../scripts/validateString";
+import { createUser } from "../../firebase/fireAuth";
+import { ModalContext } from "../../contexts/ModalContext";
 import AuthModalErrorMessage from "../../components/AuthModalErrorMessage";
+import CompleteSignUp from "../../components/CompleteSignUp";
+import firebaseErrors from "../../data/firebaseError.json";
 
 export default function SignUp() {
   // properties
@@ -21,14 +17,14 @@ export default function SignUp() {
   const email = location.state.data;
 
   // global state
-  const { setUID } = useContext(AuthContext);
+  const { setUID, username } = useContext(AuthContext);
   const { setIsModal } = useContext(ModalContext);
 
   // local state
-  const [newEmail, setNewEmail] = useState(email);
-  const [username, setUsername] = useState("");
+  const [confirmEmail, setConfirmEmail] = useState(email);
   const [password, setPassword] = useState("");
 
+  // methods
   async function onSignUp(event) {
     event.preventDefault();
 
@@ -40,7 +36,7 @@ export default function SignUp() {
   }
 
   async function createUID() {
-    const uid = await createUser(newEmail, password);
+    const uid = await createUser(confirmEmail, password);
 
     return uid;
   }
@@ -66,59 +62,10 @@ export default function SignUp() {
   }
 
   return (
-    <div className="registration">
-      <div className="register-header">
-        <span>step 2 of 2</span>
-        <h1>Create a password to start your membership</h1>
-      </div>
-      <div className="register-body">
-        <p>Just a few steps left - then it's done!</p>
-        <p>We also hate paperwork.</p>
-      </div>
-      <div className="register-form">
-        <form onSubmit={onSignUp}>
-          <InputField
-            setup={form.email}
-            state={[newEmail, setNewEmail]}
-            // validation={validateEmail}
-          />
-          <InputField
-            setup={form.username}
-            state={[username, setUsername]}
-            validation={validateString}
-          />
-          <InputField
-            setup={form.password}
-            state={[password, setPassword]}
-            validation={validateString}
-          />
-          {/* <input
-            type="email"
-            value={newEmail}
-            onChange={(event) => setNewEmail(event.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(event) => setPassword(event.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="name"
-            value={username}
-            onChange={(event) => setUsername(event.target.value)}
-          /> */}
-
-          <div className="email-preference">
-            <input type="checkbox" name="" id="" />
-            <span>Do not send me email with special offers from Netflix.</span>
-          </div>
-          <div className="submit-btn-container">
-            <button>Next</button>
-          </div>
-        </form>
-      </div>
-    </div>
+    <CompleteSignUp
+      emailState={[confirmEmail, setConfirmEmail]}
+      passState={[password, setPassword]}
+      onSignUp={onSignUp}
+    />
   );
 }
