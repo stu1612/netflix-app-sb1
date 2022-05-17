@@ -6,7 +6,6 @@ import Landing from "../pages/LoggedOut/Landing";
 import Login from "../pages/LoggedOut/Login";
 import RecoverPassword from "../pages/LoggedOut/RecoverPassword";
 import Registration from "../pages/LoggedOut/Registration";
-// import ConfirmPassword from "../pages/LoggedOut/ConfirmPassword";
 import SignUp from "../pages/LoggedOut/SignUp";
 
 export default function LoggedOutRoutes() {

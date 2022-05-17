@@ -1,6 +1,6 @@
 // npm
 import { useState, useContext } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 // files
 import { AuthContext } from "../../contexts/AuthContext";
@@ -13,6 +13,7 @@ import firebaseErrors from "../../data/firebaseError.json";
 
 export default function SignUp() {
   // properties
+  const navigate = useNavigate();
   const location = useLocation();
   const email = location.state.data;
 
@@ -51,7 +52,7 @@ export default function SignUp() {
   function onSuccess(uid) {
     setUID(uid);
     console.log(uid);
-    // navigation("/dashboard");
+    navigate("/netflix");
   }
 
   function onFail(error) {
