@@ -1,22 +1,15 @@
 // npm
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import InputField from "../../components/InputField";
 
 // files
 import form from "../../data/signUp.json";
-import validateString from "../../scripts/validateString";
 import validateEmail from "../../scripts/validateEmail";
 
 export default function Landing() {
   // global state
   const [email, setEmail] = useState("");
-
-  const navigate = useNavigate();
-
-  // function emailIsValid() {
-  //   email && navigate("/signup/registration");
-  // }
 
   return (
     <section id="hero">
@@ -35,21 +28,14 @@ export default function Landing() {
                 state={[email, setEmail]}
                 validation={validateEmail}
               />
-              {email ? (
-                <Link
-                  className="bta cta"
-                  state={{ data: email }}
-                  to="/signup/registration"
-                >
-                  <span>Get started</span>
-                  <span>></span>
-                </Link>
-              ) : (
-                <Link className="bta cta disbaled" to="/">
-                  <span>Get started</span>
-                  <span>></span>
-                </Link>
-              )}
+              <Link
+                className={`btn cta ${email ? "active" : "disabled"}`}
+                state={{ data: email }}
+                to="/signup/registration"
+              >
+                <span>Get started</span>
+                <span>></span>
+              </Link>
             </form>
           </div>
         </div>
