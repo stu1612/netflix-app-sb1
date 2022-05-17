@@ -4,13 +4,17 @@ import { useNavigate } from "react-router-dom";
 
 // files
 import { AuthContext } from "../../contexts/AuthContext";
-import CompleteLogin from "../../components/CompleteLogin";
 import { loginUser } from "../../firebase/fireAuth";
+import { ModalContext } from "../../contexts/ModalContext";
+import CompleteLogin from "../../components/CompleteLogin";
 import firebaseErrors from "../../data/firebaseError.json";
+import AuthModalErrorMessage from "../../components/AuthModalErrorMessage";
 
 export default function Login() {
   // global state
   const { setUID, admin } = useContext(AuthContext);
+  const { setIsModal } = useContext(ModalContext);
+
   // local state
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -27,16 +31,14 @@ export default function Login() {
 
   function onSucess(data) {
     setUID(data);
-    navigate("/");
-    // data === admin && navigate("/admin");
-    // data === !admin && navigate("/");
-    console.log("data -", data);
+    data === admin && navigate("/admin");
+    data !== admin && navigate("/netflix");
   }
 
   function onFail(error) {
     const message = firebaseErrors[error.code] || firebaseErrors["default"];
     console.error(error.code);
-    alert(message);
+    setIsModal(<AuthModalErrorMessage message={message} />);
   }
 
   return (

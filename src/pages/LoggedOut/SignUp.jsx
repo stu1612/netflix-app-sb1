@@ -28,7 +28,6 @@ export default function SignUp() {
   // methods
   async function onSignUp(event) {
     event.preventDefault();
-
     const uid = await createUID().catch(onFail);
     let user;
 
@@ -38,26 +37,22 @@ export default function SignUp() {
 
   async function createUID() {
     const uid = await createUser(confirmEmail, password);
-
     return uid;
   }
 
   async function createDocument(uid) {
     const user = { username: username };
     const document = await createDocumentWithId("users", uid, user);
-
     return document;
   }
 
   function onSuccess(uid) {
     setUID(uid);
-    console.log(uid);
     navigate("/netflix");
   }
 
   function onFail(error) {
     const message = firebaseErrors[error.code] || firebaseErrors["default"];
-
     console.error(error.code);
     setIsModal(<AuthModalErrorMessage message={message} />);
   }

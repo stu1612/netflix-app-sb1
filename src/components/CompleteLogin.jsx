@@ -1,11 +1,11 @@
 // npm
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 // files
 import { AuthContext } from "../contexts/AuthContext";
 import form from "../data/login.json";
 import InputField from "./InputField";
-// import validateEmail from "../scripts/validateEmail";
 import validateString from "../scripts/validateString";
 
 export default function CompleteLogin({ emailState, passState, onLogin }) {
@@ -21,11 +21,7 @@ export default function CompleteLogin({ emailState, passState, onLogin }) {
         <div className="login-form">
           <h2>sign in</h2>
           <form onSubmit={onLogin}>
-            <InputField
-              setup={form.email}
-              state={[email, setEmail]}
-              //   validation={validateEmail}
-            />
+            <InputField setup={form.email} state={[email, setEmail]} />
             <InputField
               setup={form.password}
               state={[password, setPassword]}
@@ -33,7 +29,9 @@ export default function CompleteLogin({ emailState, passState, onLogin }) {
             />
             <button>sign in</button>
             <input type="checkbox" checked={checked} onChange={toggleChecked} />
-            <span>Need help?</span>
+            <span>
+              <Link to="/LoginHelp">Need help?</Link>
+            </span>
           </form>
           <div className="sign-up-notice">
             <h3>
@@ -41,7 +39,8 @@ export default function CompleteLogin({ emailState, passState, onLogin }) {
             </h3>
             <p>
               This page is protected by Google reCAPTCHA to confirm that you are
-              not a robot. <span>Read more.</span>
+              not a robot.
+              <span>Read more.</span>
             </p>
           </div>
         </div>

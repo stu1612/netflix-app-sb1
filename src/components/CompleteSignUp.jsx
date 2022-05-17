@@ -1,6 +1,5 @@
 // npm
 import { useContext } from "react";
-
 // files
 import { AuthContext } from "../contexts/AuthContext";
 import form from "../data/signUp.json";
@@ -10,10 +9,10 @@ import validateString from "../scripts/validateString";
 export default function CompleteSignUp({ emailState, passState, onSignUp }) {
   // global state
   const { username, setUsername } = useContext(AuthContext);
-
   // local state
   const [confirmEmail, setConfirmEmail] = emailState;
   const [password, setPassword] = passState;
+
   return (
     <div className="registration">
       <div className="register-header">
@@ -40,7 +39,6 @@ export default function CompleteSignUp({ emailState, passState, onSignUp }) {
             state={[password, setPassword]}
             validation={validateString}
           />
-
           <div className="email-preference">
             <input type="checkbox" name="" id="" />
             <span>Do not send me email with special offers from Netflix.</span>

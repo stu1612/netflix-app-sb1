@@ -5,7 +5,6 @@ import { BrowserRouter } from "react-router-dom";
 import { AuthContext } from "./contexts/AuthContext";
 import LoggedInRoutes from "./routes/LoggedInRoutes";
 import LoggedOutRoutes from "./routes/LoggedOutRoutes";
-import Navbar from "./components/Navbar";
 import ModalContextProvider from "./contexts/ModalContext";
 import Modal from "./components/Modal";
 // styles
@@ -23,11 +22,10 @@ export default function App() {
     <div className="App">
       <ModalContextProvider>
         <BrowserRouter>
-          <Navbar />
           {uid && <LoggedInRoutes />}
           {!uid && <LoggedOutRoutes />}
-          <Modal />
         </BrowserRouter>
+        <Modal />
       </ModalContextProvider>
     </div>
   );
