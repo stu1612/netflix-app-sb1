@@ -27,8 +27,9 @@ export default function Login() {
 
   function onSucess(data) {
     setUID(data);
-    data === admin && navigate("/admin");
-    data === !admin && navigate("/netflix");
+    navigate("/");
+    // data === admin && navigate("/admin");
+    // data === !admin && navigate("/");
     console.log("data -", data);
   }
 

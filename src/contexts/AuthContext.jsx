@@ -1,4 +1,5 @@
 import { useState, createContext } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 
 export const AuthContext = createContext();
 
@@ -19,6 +20,11 @@ export default function AuthContextProvider({ children }) {
     setChecked(!checked);
   }
 
+  function onSignOut() {
+    setUID(null);
+    Navigate("/");
+  }
+
   return (
     <AuthContext.Provider
       value={{
@@ -30,6 +36,7 @@ export default function AuthContextProvider({ children }) {
         setUsername,
         checked,
         toggleChecked,
+        onSignOut,
       }}
     >
       {children}
