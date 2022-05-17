@@ -1,3 +1,7 @@
+// npm
+import { Link } from "react-router-dom";
+
+// files
 import logo from "../assets/images/netflix-logo-png-2562.png";
 
 export default function Navbar() {
@@ -8,7 +12,9 @@ export default function Navbar() {
           <img src={logo} alt="netflix logo" />
         </div>
         <div className="navbar-cta">
-          <button className="cta-red">Sign in</button>
+          <Link to="/login" className="cta-red">
+            Sign in
+          </Link>
         </div>
       </div>
     </nav>

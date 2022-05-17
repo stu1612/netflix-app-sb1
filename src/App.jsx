@@ -1,5 +1,5 @@
 // npm
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 // files
 import { AuthContext } from "./contexts/AuthContext";
@@ -13,13 +13,17 @@ import "./styles/style.css";
 
 export default function App() {
   // global state
-  const { uid } = useContext(AuthContext);
+  const { checked, uid } = useContext(AuthContext);
+
+  useEffect(() => {
+    checked && localStorage.setItem("token", JSON.stringify(uid));
+  }, [checked, uid]);
 
   return (
     <div className="App">
       <ModalContextProvider>
-        <Navbar />
         <BrowserRouter>
+          <Navbar />
           {uid && <LoggedInRoutes />}
           {!uid && <LoggedOutRoutes />}
           <Modal />
