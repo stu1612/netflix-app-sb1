@@ -1,58 +1,16 @@
-import React from "react";
+// files
 import Landing from "../../components/Landing";
+import Slider from "../../components/Slider";
 
 export default function Home() {
   return (
     <div>
       <Landing />
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores minus
-        hic, aspernatur soluta ex veniam sapiente fuga architecto, facere
-        dignissimos accusamus explicabo excepturi unde natus perspiciatis
-        cupiditate nihil quae eum?
-      </p>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores minus
-        hic, aspernatur soluta ex veniam sapiente fuga architecto, facere
-        dignissimos accusamus explicabo excepturi unde natus perspiciatis
-        cupiditate nihil quae eum?
-      </p>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores minus
-        hic, aspernatur soluta ex veniam sapiente fuga architecto, facere
-        dignissimos accusamus explicabo excepturi unde natus perspiciatis
-        cupiditate nihil quae eum?
-      </p>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores minus
-        hic, aspernatur soluta ex veniam sapiente fuga architecto, facere
-        dignissimos accusamus explicabo excepturi unde natus perspiciatis
-        cupiditate nihil quae eum?
-      </p>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores minus
-        hic, aspernatur soluta ex veniam sapiente fuga architecto, facere
-        dignissimos accusamus explicabo excepturi unde natus perspiciatis
-        cupiditate nihil quae eum?
-      </p>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores minus
-        hic, aspernatur soluta ex veniam sapiente fuga architecto, facere
-        dignissimos accusamus explicabo excepturi unde natus perspiciatis
-        cupiditate nihil quae eum?
-      </p>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores minus
-        hic, aspernatur soluta ex veniam sapiente fuga architecto, facere
-        dignissimos accusamus explicabo excepturi unde natus perspiciatis
-        cupiditate nihil quae eum?
-      </p>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores minus
-        hic, aspernatur soluta ex veniam sapiente fuga architecto, facere
-        dignissimos accusamus explicabo excepturi unde natus perspiciatis
-        cupiditate nihil quae eum?
-      </p>
+      <Slider />
+      <Slider />
+      <Slider />
+      <Slider />
+      <Slider />
     </div>
   );
 }

@@ -13,4 +13,5 @@ body {
   direction: ltr;
   -webkit-font-smoothing: antialiased;
   font-family: "NetflixRegular";
+  overflow-x: hidden;
 }

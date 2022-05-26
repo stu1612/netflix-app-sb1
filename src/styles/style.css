@@ -12,6 +12,7 @@
 @import "./organisms/landing.css";
 @import "./organisms/landingHome.css";
 @import "./organisms/navbar.css";
+@import "./organisms/slide.css";
 
 /* templates */
 @import "./templates/forms.css";
