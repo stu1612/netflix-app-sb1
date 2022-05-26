@@ -1,24 +1,72 @@
 .navbar {
-  background: transparent; /* position: absolute;
-    top: 0;
-    width: 100%;
-    height: auto;
-    z-index: 10; */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 60%);
+  transition: 0.3s all ease-in-out;
+}
+
+.active {
+  background-color: var(--black);
 }
 
 .navbar-container {
-  margin: 0 3.5rem;
-  height: 90px;
+  padding: 0 3.5rem;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.navbar-content {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-content span {
+  margin-right: 20px;
+}
+
 .navbar-logo {
   height: 2.75rem;
+  margin-right: 40px;
 }
 
 .navbar-logo img {
   width: auto;
   height: 100%;
+}
+
+.navbar-cta {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-cta img {
+  height: 30px;
+  width: 30px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.nav-icon {
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+.dropdown .options {
+  display: none;
+  background-color: #333;
+}
+
+.options span {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown:hover .options {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
 }

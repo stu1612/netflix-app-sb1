@@ -2,6 +2,7 @@
 import { useContext } from "react";
 import { Routes, Route } from "react-router-dom";
 import LoggedInNavbar from "../components/LoggedInNavbar";
+import Navbar from "../components/Navbar";
 // files
 import { AuthContext } from "../contexts/AuthContext";
 import Admin from "../pages/LoggedIn/Admin";
@@ -13,7 +14,7 @@ export default function LoggedInRoutes() {
   const { uid, admin } = useContext(AuthContext);
   return (
     <div>
-      <LoggedInNavbar />
+      <Navbar />
       <Routes>
         {/* <Route path="/" element={<Landing />} /> */}
         <Route path="/" element={<Home />} />

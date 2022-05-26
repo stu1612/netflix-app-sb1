@@ -1,21 +1,47 @@
+// npm
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faMagnifyingGlass,
+  faBell,
+  faChevronDown,
+} from "@fortawesome/free-solid-svg-icons";
+
 // files
 import logo from "../assets/images/netflix-logo-png-2562.png";
+import user from "../assets/images/netflix-avatar.png";
+import onScroll from "../scripts/onScroll";
 
-export default function Navbar({ label, ctaClick }) {
+export default function Navbar() {
+  // local state
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // methods
+  onScroll(setIsScrolled);
+
   return (
-    <nav className="navbar">
+    <nav className={isScrolled ? "navbar active" : "navbar"}>
       <div className="navbar-container">
-        <div className="navbar-logo">
-          <img src={logo} alt="netflix logo" />
+        <div className="navbar-content">
+          <div className="navbar-logo">
+            <img src={logo} alt="netflix logo" />
+          </div>
+          <span>Home</span>
+          <span>Series</span>
+          <span>Movies</span>
+          <span>New and Popular</span>
         </div>
-        <span>Home</span>
-        <span>Series</span>
-        <span>Movies</span>
-        <span>New and Popular</span>
         <div className="navbar-cta">
-          <button className="cta-red" onClick={ctaClick}>
-            {label}
-          </button>
+          <FontAwesomeIcon icon={faMagnifyingGlass} className="nav-icon" />
+          <FontAwesomeIcon icon={faBell} className="nav-icon" />
+          <img src={user} alt="netflix user avatar" />
+          <div className="dropdown">
+            <FontAwesomeIcon icon={faChevronDown} className="nav-icon" />
+            <div className="options">
+              <span>settings</span>
+              <span>logout</span>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
