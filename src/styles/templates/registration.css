@@ -20,7 +20,7 @@
 }
 
 .device-icons {
-  background-image: url("../assets/images/devices.png");
+  background-image: url("../../assets/images/devices.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;

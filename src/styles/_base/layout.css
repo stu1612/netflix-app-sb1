@@ -6,8 +6,14 @@
   box-sizing: border-box;
 }
 
+:root {
+  --black: #0b0b0b;
+  --white: #fff;
+}
+
 body {
-  color: #333;
+  background-color: var(--black);
+  color: var(--white);
   font-size: 16px;
   direction: ltr;
   -webkit-font-smoothing: antialiased;

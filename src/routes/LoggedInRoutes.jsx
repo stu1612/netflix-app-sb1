@@ -15,8 +15,8 @@ export default function LoggedInRoutes() {
     <div>
       <LoggedInNavbar />
       <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/netflix" element={<Home />} />
+        {/* <Route path="/" element={<Landing />} /> */}
+        <Route path="/" element={<Home />} />
         {uid === admin && <Route path="admin" element={<Admin />} />}
       </Routes>
     </div>

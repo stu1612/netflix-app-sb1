@@ -48,7 +48,7 @@ export default function SignUp() {
 
   function onSuccess(uid) {
     setUID(uid);
-    navigate("/netflix");
+    navigate("/");
   }
 
   function onFail(error) {

@@ -1,10 +1,19 @@
-@import "./typography.css";
+/* base */
+@import "./_base/layout.css";
+@import "./_base/colors.css";
+@import "./_base/typography.css";
 
-@import "./layout.css";
-@import "./landing.css";
-@import "./navbar.css";
-@import "./button.css";
-@import "./registration.css";
-@import "./modal.css";
-@import "./forms.css";
-@import "./recover.css";
+/* atoms */
+@import "./atoms/buttons.css";
+
+/* molecules */
+
+/* organisms */
+@import "./organisms/landing.css";
+@import "./organisms/navbar.css";
+
+/* templates */
+@import "./templates/forms.css";
+@import "./templates/modal.css";
+@import "./templates/recover.css";
+@import "./templates/registration.css";

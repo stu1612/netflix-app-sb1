@@ -32,7 +32,7 @@ export default function Login() {
   function onSucess(data) {
     setUID(data);
     data === admin && navigate("/admin");
-    data !== admin && navigate("/netflix");
+    data !== admin && navigate("/");
   }
 
   function onFail(error) {
