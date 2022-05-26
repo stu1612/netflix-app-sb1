@@ -6,11 +6,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  --black: #0b0b0b;
-  --white: #fff;
-}
-
 body {
   background-color: var(--black);
   color: var(--white);

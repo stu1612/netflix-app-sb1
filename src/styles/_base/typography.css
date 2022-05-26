@@ -29,3 +29,9 @@
   src: local("NetflixThin"),
     url("../../assets/fonts/NetflixSansThin.ttf") format("truetype");
 }
+
+button {
+  font-family: "NetflixRegular";
+  line-height: 0;
+  cursor: pointer;
+}

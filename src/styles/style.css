@@ -10,6 +10,7 @@
 
 /* organisms */
 @import "./organisms/landing.css";
+@import "./organisms/landingHome.css";
 @import "./organisms/navbar.css";
 
 /* templates */

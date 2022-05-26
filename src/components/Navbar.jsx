@@ -26,10 +26,12 @@ export default function Navbar() {
           <div className="navbar-logo">
             <img src={logo} alt="netflix logo" />
           </div>
-          <span>Home</span>
-          <span>Series</span>
-          <span>Movies</span>
-          <span>New and Popular</span>
+          <div className="desktop-navigation">
+            <span>Home</span>
+            <span>Series</span>
+            <span>Movies</span>
+            <span>New and Popular</span>
+          </div>
         </div>
         <div className="navbar-cta">
           <FontAwesomeIcon icon={faMagnifyingGlass} className="nav-icon" />
@@ -40,6 +42,12 @@ export default function Navbar() {
             <div className="options">
               <span>settings</span>
               <span>logout</span>
+              <div className="mobile-navigation">
+                <span>Home</span>
+                <span>Series</span>
+                <span>Movies</span>
+                <span>Popular</span>
+              </div>
             </div>
           </div>
         </div>

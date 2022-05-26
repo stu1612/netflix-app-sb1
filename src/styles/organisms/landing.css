@@ -16,17 +16,6 @@
   position: relative;
 }
 
-.landing {
-  width: 100%;
-  min-height: 100vh;
-  height: 100%;
-}
-
-.landing img {
-  object-fit: cover;
-  width: 100%;
-}
-
 .story-text {
   position: absolute;
   transform: translate(-50%, -50%);

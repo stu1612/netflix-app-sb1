@@ -1,3 +1,7 @@
+button {
+  border: 0;
+}
+
 .cta-red {
   background-color: #e50914;
   line-height: normal;
