@@ -28,9 +28,9 @@ export default function SlideItem() {
           />
           <div className="slide-info">
             <div className="slide-icons">
-              <FontAwesomeIcon icon={faPlay} />
-              <FontAwesomeIcon icon={faHeart} />
-              <FontAwesomeIcon icon={faAdd} />
+              <FontAwesomeIcon icon={faPlay} className="slide-icon" />
+              <FontAwesomeIcon icon={faHeart} className="slide-icon" />
+              <FontAwesomeIcon icon={faAdd} className="slide-icon" />
             </div>
             <div className="slide-content">
               <span className="age-restriction">+18</span>

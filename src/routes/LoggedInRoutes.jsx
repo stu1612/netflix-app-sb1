@@ -8,6 +8,7 @@ import { AuthContext } from "../contexts/AuthContext";
 import Admin from "../pages/LoggedIn/Admin";
 import Home from "../pages/LoggedIn/Home";
 import Landing from "../pages/LoggedOut/Landing";
+import Watch from "../pages/LoggedIn/Watch";
 
 export default function LoggedInRoutes() {
   // global state
@@ -18,6 +19,7 @@ export default function LoggedInRoutes() {
       <Routes>
         {/* <Route path="/" element={<Landing />} /> */}
         <Route path="/" element={<Home />} />
+        <Route path="watch" element={<Watch />} />
         {uid === admin && <Route path="admin" element={<Admin />} />}
       </Routes>
     </div>
