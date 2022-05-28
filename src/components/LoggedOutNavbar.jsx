@@ -1,9 +1,10 @@
+// npm
 import { useNavigate } from "react-router-dom";
 
 // files
-import Navbar from "./Navbar";
+import logo from "../assets/images/netflix-logo-png-2562.png";
 
-export default function LoggedOutNavbar() {
+export default function Nav() {
   // properties
   const navigate = useNavigate();
 
@@ -11,5 +12,25 @@ export default function LoggedOutNavbar() {
   function onLogin() {
     navigate("/login");
   }
-  return <Navbar label="Sign in" ctaClick={onLogin} />;
+
+  function returnHome() {
+    navigate("/");
+  }
+
+  return (
+    <nav className="navbar">
+      <div className="navbar-container">
+        <div className="navbar-content w-100">
+          <div className="navbar-logo">
+            <img src={logo} alt="netflix logo" onClick={returnHome} />
+          </div>
+          <div className="navbar-cta">
+            <button className="cta-red" onClick={onLogin}>
+              Sign in
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
 }

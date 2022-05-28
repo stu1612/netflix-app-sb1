@@ -2,8 +2,7 @@
 import { useContext } from "react";
 // files
 import { AuthContext } from "../contexts/AuthContext";
-import form from "../data/emailSignUp.json";
-import InputField from "../components/InputField";
+import form from "../data/signUp.json";
 import validateString from "../scripts/validateString";
 import validateEmail from "../scripts/validateEmail";
 import UserInputField from "./UserInputField";

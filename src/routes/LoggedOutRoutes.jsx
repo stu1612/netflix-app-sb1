@@ -1,7 +1,6 @@
 // npm
 import { Routes, Route } from "react-router-dom";
 import LoggedOutNavbar from "../components/LoggedOutNavbar";
-import Nav from "../components/Nav";
 
 // files
 import Landing from "../pages/LoggedOut/Landing";
@@ -13,7 +12,7 @@ import SignUp from "../pages/LoggedOut/SignUp";
 export default function LoggedOutRoutes() {
   return (
     <div>
-      <Nav />
+      <LoggedOutNavbar />
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="signup/registration" element={<Registration />} />

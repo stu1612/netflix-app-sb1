@@ -45,6 +45,7 @@
 .navbar-logo img {
   width: auto;
   height: 100%;
+  cursor: pointer;
 }
 
 .navbar-cta {

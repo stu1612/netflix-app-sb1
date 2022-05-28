@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 // files
-import form from "../../data/emailSignUp.json";
+import form from "../../data/signUp.json";
 import validateEmail from "../../scripts/validateEmail";
 import UserInputField from "../../components/UserInputField";
 
