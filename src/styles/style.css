@@ -9,12 +9,15 @@
 /* molecules */
 @import "./molecules/reactPlayer.css";
 @import "./molecules/userInputField.css";
+@import "./molecules/container.css";
 
 /* organisms */
 @import "./organisms/landing.css";
 @import "./organisms/landingHome.css";
 @import "./organisms/navbar.css";
 @import "./organisms/slide.css";
+@import "./organisms/admin.css";
+@import "./organisms/adminCategory.css";
 
 /* templates */
 @import "./templates/modal.css";

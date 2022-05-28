@@ -70,6 +70,24 @@ button {
   pointer-events: none;
 }
 
+.btn-admin {
+  width: 100%;
+  padding: 1rem;
+  background-color: red;
+  color: white;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+
+.btn-back {
+  display: flex;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  background-color: #fff;
+}
+
 @media (min-width: 760px) {
   .btn-signup {
     padding: 1.25rem;
