@@ -8,7 +8,7 @@ import { recoverUser } from "../../firebase/fireAuth";
 import AuthModalErrorMessage from "../../components/AuthModalErrorMessage";
 import firebaseErrors from "../../data/firebaseError.json";
 import form from "../../data/recoverPassword.json";
-import InputField from "../../components/InputField";
+import UserInputField from "../../components/UserInputField";
 
 export default function RecoverPassword() {
   // globalstate
@@ -42,15 +42,22 @@ export default function RecoverPassword() {
   return (
     <div className="landing">
       <div className="recover-form">
-        <h2>Forgot email/password</h2>
-        <p>
-          We'll send you an email with instructions on how to reset your
-          password.
-        </p>
-        <form onSubmit={onRecover}>
-          <InputField setup={form.email} state={[email, setEmail]} />
-          <button>Send me an email</button>
-        </form>
+        <div className="recover-content">
+          <h2>Forgot Email/Password</h2>
+          <p>
+            We'll send you an email with instructions on how to reset your
+            password.
+          </p>
+          <form onSubmit={onRecover}>
+            <UserInputField
+              setup={form.email}
+              state={[email, setEmail]}
+              classname="input-padding"
+            />
+
+            <button className="btn-recover">Email Me</button>
+          </form>
+        </div>
       </div>
     </div>
   );

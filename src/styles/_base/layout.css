@@ -15,3 +15,26 @@ body {
   font-family: "NetflixRegular";
   overflow-x: hidden;
 }
+
+a,
+li {
+  list-style: none;
+  text-decoration: none;
+}
+
+input,
+textarea {
+  outline: none;
+  border: none;
+}
+
+button,
+input[type="submit"] {
+  outline: none;
+  border: none;
+}
+
+button:hover,
+input[type="submit"] {
+  cursor: pointer;
+}

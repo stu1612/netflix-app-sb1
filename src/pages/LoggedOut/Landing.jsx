@@ -1,11 +1,13 @@
 // npm
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import InputField from "../../components/InputField";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 // files
-import form from "../../data/signUp.json";
+import form from "../../data/emailSignUp.json";
 import validateEmail from "../../scripts/validateEmail";
+import UserInputField from "../../components/UserInputField";
 
 export default function Landing() {
   // global state
@@ -15,26 +17,29 @@ export default function Landing() {
     <section id="hero">
       <div className="hero-landing">
         <div className="story-text">
-          <h1>Unlimited with movies, series and more.</h1>
+          <h1>Unlimited movies, series and more.</h1>
           <h2>Look where you want. Exit whenver you want.</h2>
           <p>
-            Ready to start watching? Enter your email address to create or
-            reactivate an account.
+            Ready to watch? Enter your email address to create or reactivate an
+            account.
           </p>
           <div className="email-form">
             <form>
-              <InputField
+              <UserInputField
                 setup={form.email}
                 state={[email, setEmail]}
                 validation={validateEmail}
+                className="email-input"
               />
               <Link
-                className={`btn cta ${email ? "active" : "disabled"}`}
+                className={`btn-signup ${email ? "active" : "disabled"}`}
                 state={{ data: email }}
                 to="/signup/registration"
               >
                 <span>Get started</span>
-                <span>></span>
+                <span style={{ marginLeft: "5px" }}>
+                  <FontAwesomeIcon icon={faChevronRight} />
+                </span>
               </Link>
             </form>
           </div>

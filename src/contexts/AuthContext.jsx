@@ -18,6 +18,10 @@ export default function AuthContextProvider({ children }) {
     setChecked(!checked);
   }
 
+  function logout() {
+    setUID(null);
+  }
+
   return (
     <AuthContext.Provider
       value={{
@@ -29,6 +33,7 @@ export default function AuthContextProvider({ children }) {
         setUsername,
         checked,
         toggleChecked,
+        logout,
       }}
     >
       {children}

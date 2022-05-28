@@ -1,0 +1,6 @@
+.react-player {
+  position: relative;
+  height: 90vh;
+  top: 10vh;
+  object-fit: cover;
+}

@@ -1,5 +1,5 @@
 // npm
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMagnifyingGlass,
@@ -11,8 +11,11 @@ import {
 import logo from "../assets/images/netflix-logo-png-2562.png";
 import user from "../assets/images/netflix-avatar.png";
 import onScroll from "../scripts/onScroll";
+import { AuthContext } from "../contexts/AuthContext";
 
 export default function Navbar() {
+  // global state
+  const { logout } = useContext(AuthContext);
   // local state
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -33,7 +36,7 @@ export default function Navbar() {
             <span>New and Popular</span>
           </div>
         </div>
-        <div className="navbar-cta">
+        <div className="navbar-cta mr-2">
           <FontAwesomeIcon icon={faMagnifyingGlass} className="nav-icon" />
           <FontAwesomeIcon icon={faBell} className="nav-icon" />
           <img src={user} alt="netflix user avatar" />
@@ -41,7 +44,7 @@ export default function Navbar() {
             <FontAwesomeIcon icon={faChevronDown} className="nav-icon" />
             <div className="options">
               <span>settings</span>
-              <span>logout</span>
+              <span onClick={logout}>logout</span>
               <div className="mobile-navigation">
                 <span>Home</span>
                 <span>Series</span>

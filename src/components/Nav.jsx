@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 // files
 import logo from "../assets/images/netflix-logo-png-2562.png";
 
-export default function Nav({ ctaClick }) {
+export default function Nav() {
   // properties
   const navigate = useNavigate();
 
@@ -16,7 +16,7 @@ export default function Nav({ ctaClick }) {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <div className="navbar-content">
+        <div className="navbar-content w-100">
           <div className="navbar-logo">
             <img src={logo} alt="netflix logo" />
           </div>

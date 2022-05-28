@@ -7,6 +7,8 @@
 @import "./atoms/buttons.css";
 
 /* molecules */
+@import "./molecules/reactPlayer.css";
+@import "./molecules/userInputField.css";
 
 /* organisms */
 @import "./organisms/landing.css";
@@ -15,7 +17,8 @@
 @import "./organisms/slide.css";
 
 /* templates */
-@import "./templates/forms.css";
 @import "./templates/modal.css";
 @import "./templates/recover.css";
 @import "./templates/registration.css";
+@import "./templates/signUp.css";
+@import "./templates/login.css";

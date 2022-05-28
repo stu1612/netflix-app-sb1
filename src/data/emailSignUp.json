@@ -1,13 +1,18 @@
 {
   "email": {
-    "text": "Email ",
+    "text": "Email address",
     "autoFocus": false,
     "type": "email",
     "required": true
   },
-
+  "username": {
+    "text": "Username",
+    "autoFocus": false,
+    "type": "text",
+    "required": true
+  },
   "password": {
-    "text": "Password",
+    "text": "Account password",
     "autoFocus": false,
     "type": "password",
     "required": true

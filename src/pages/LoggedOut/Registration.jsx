@@ -15,9 +15,9 @@ export default function Registration() {
             step <span className="bolder">1</span> of{" "}
             <span className="bolder">2</span>
           </p>
-          <h1 className="registration-title">
+          <h2 className="registration-title">
             Complete the registration of your account
-          </h1>
+          </h2>
         </div>
         <div className="register-body">
           <p>

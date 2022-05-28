@@ -24,6 +24,11 @@
   align-items: center;
 }
 
+.w-100 {
+  width: 100%;
+  justify-content: space-between;
+}
+
 .desktop-navigation {
   display: none;
 }
@@ -45,6 +50,9 @@
 .navbar-cta {
   display: flex;
   align-items: center;
+}
+
+.mr-2 {
   margin-right: 2rem;
 }
 

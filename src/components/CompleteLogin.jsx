@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 // files
 import { AuthContext } from "../contexts/AuthContext";
 import form from "../data/login.json";
-import InputField from "./InputField";
 import validateString from "../scripts/validateString";
+import UserInputField from "../components/UserInputField";
 
 export default function CompleteLogin({ emailState, passState, onLogin }) {
   // global state
@@ -16,22 +16,42 @@ export default function CompleteLogin({ emailState, passState, onLogin }) {
   const [password, setPassword] = passState;
 
   return (
-    <div id="login">
+    <section id="login">
       <div className="hero-landing">
         <div className="login-form">
-          <h2>sign in</h2>
+          <h1>sign in</h1>
           <form onSubmit={onLogin}>
-            <InputField setup={form.email} state={[email, setEmail]} />
-            <InputField
+            <UserInputField
+              setup={form.email}
+              state={[email, setEmail]}
+              classname="m-bottom-2"
+              inputStyle="dark-bg"
+            />
+            <UserInputField
               setup={form.password}
               state={[password, setPassword]}
               validation={validateString}
+              classname="m-bottom-2"
+              inputStyle="dark-bg"
             />
-            <button>sign in</button>
-            <input type="checkbox" checked={checked} onChange={toggleChecked} />
-            <span>
-              <Link to="/LoginHelp">Need help?</Link>
-            </span>
+            <div className="btn-signup">
+              <button>Sign In</button>
+            </div>
+            <div className="remember-check">
+              <div className="checkbox">
+                <input
+                  type="checkbox"
+                  checked={checked}
+                  onChange={toggleChecked}
+                />
+                <span>Remember me</span>
+              </div>
+              <span>
+                <Link to="/LoginHelp" className="help">
+                  Need help?
+                </Link>
+              </span>
+            </div>
           </form>
           <div className="sign-up-notice">
             <h3>
@@ -40,11 +60,11 @@ export default function CompleteLogin({ emailState, passState, onLogin }) {
             <p>
               This page is protected by Google reCAPTCHA to confirm that you are
               not a robot.
-              <span>Read more.</span>
+              <span>Learn more.</span>
             </p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
