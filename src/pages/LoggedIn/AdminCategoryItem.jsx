@@ -43,18 +43,22 @@ export default function AdminCategoryItem() {
       <div className="card-wrapper" key={item.id}>
         <h2>{item.season}</h2>
         <div className="btn-display">
-          <FontAwesomeIcon
-            icon={faTrashCan}
-            className="fa-icon"
-            onClick={() => onDeleteItem(item.id)}
-          />
-          <Link
-            key={item.id}
-            className="btn"
-            to={`/admin/${id}/${subId}/${item.id}`}
-          >
-            <FontAwesomeIcon icon={faBoxOpen} className="fa-icon" />
-          </Link>
+          <button>
+            <FontAwesomeIcon
+              icon={faTrashCan}
+              className="fa-icon"
+              onClick={() => onDeleteItem(item.id)}
+            />
+          </button>
+          <button>
+            <Link
+              key={item.id}
+              className="btn"
+              to={`/admin/${id}/${subId}/${item.id}`}
+            >
+              <FontAwesomeIcon icon={faBoxOpen} className="fa-icon" />
+            </Link>
+          </button>
         </div>
       </div>
     ));

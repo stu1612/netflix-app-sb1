@@ -20,10 +20,15 @@
 }
 
 .card {
-  height: 100px;
+  height: auto;
   width: 140px;
 }
 
 .card img {
   object-fit: cover;
+}
+
+.btn-display button {
+  border-radius: 50%;
+  margin: 10px;
 }

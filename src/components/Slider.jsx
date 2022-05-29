@@ -8,6 +8,7 @@ import {
 
 // files
 import SlideItem from "./SlideItem";
+import carouselScroll from "../scripts/carouselScroll";
 
 export default function Slider() {
   // local state

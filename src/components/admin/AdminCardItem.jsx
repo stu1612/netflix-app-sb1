@@ -65,14 +65,16 @@ export default function AdminCardItem({ item, id }) {
           <FontAwesomeIcon icon={faPenToSquare} className="fa-icon" />
         </button>
         {id === "series" && (
-          <Link
-            key={item.id}
-            className="btn"
-            to={`/admin/${id}/${item.id}`}
-            state={{ data: categoryItem }}
-          >
-            <FontAwesomeIcon icon={faBoxOpen} className="fa-icon" />
-          </Link>
+          <button>
+            <Link
+              key={item.id}
+              className="btn"
+              to={`/admin/${id}/${item.id}`}
+              state={{ data: categoryItem }}
+            >
+              <FontAwesomeIcon icon={faBoxOpen} className="fa-icon" />
+            </Link>
+          </button>
         )}
       </div>
     </div>

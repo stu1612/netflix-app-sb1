@@ -1,19 +1,29 @@
 // npm
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 // files
+import { AuthContext } from "../../contexts/AuthContext";
 import Loader from "../../components/Loader";
 import useLoad from "../../hooks/useLoad";
 
 export default function Admin() {
+  // global state
+  const { setUID } = useContext(AuthContext);
   // local state
   const [categories, setCategories] = useState([]);
 
   // properties
+  const navigate = useNavigate();
   const path = "media/categories/content";
 
   // methods
   const { isLoading, error } = useLoad(path, setCategories);
+
+  function logout() {
+    setUID(null);
+    navigate("/");
+  }
 
   // components
   const mappedItems = categories.map((item) => (
@@ -29,6 +39,9 @@ export default function Admin() {
   return (
     <div className="container-960 justify-center">
       <div className="admin-grid">{mappedItems}</div>
+      <button className="btn-admin" onClick={logout}>
+        Logout
+      </button>
     </div>
   );
 }

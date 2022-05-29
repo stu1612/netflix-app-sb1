@@ -85,7 +85,7 @@ export default function UpdateTitle({ item, path }) {
   }
 
   return (
-    <form className="form" onSubmit={onSubmit}>
+    <form className="form-admin" onSubmit={onSubmit}>
       <h2>Update your changes</h2>
       <InputField setup={form.title} state={[title, setTitle]} />
       <InputField setup={form.text} state={[text, setText]} />
@@ -96,8 +96,10 @@ export default function UpdateTitle({ item, path }) {
       <InputField setup={form.year} state={[year, setYear]} />
       <InputFile imageSelect={onThumbnail} label="Thumbnail" />
       <InputFile imageSelect={onImage} label="Background image" />
-      <button>Confirm</button>
-      <button onClick={() => setIsModal(null)}>Cancel</button>
+      <button className="btn-admin">Confirm</button>
+      <button onClick={() => setIsModal(null)} className="btn-admin">
+        Cancel
+      </button>
     </form>
   );
 }
