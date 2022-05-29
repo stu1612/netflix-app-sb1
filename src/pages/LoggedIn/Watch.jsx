@@ -1,11 +1,15 @@
 // npm
 import ReactPlayer from "react-player/youtube";
+import { useLocation } from "react-router-dom";
 
 export default function Watch() {
+  const location = useLocation();
+  const { videoId } = location.state.data;
+
   return (
     <div className="watch">
       <ReactPlayer
-        url="https://www.youtube.com/watch?v=FzWG8jiw4XM"
+        url={videoId}
         width="100%"
         height="90vh"
         className="react-player"

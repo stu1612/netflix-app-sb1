@@ -1,0 +1,124 @@
+.carousel {
+  width: 100%;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  height: 340px;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.slide {
+  min-height: 340px;
+  height: 100%;
+  display: block;
+  width: 400px;
+}
+
+.slide-icon {
+  border: 2px solid white;
+  padding: 8px;
+  border-radius: 50%;
+  margin: 0 5px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.swiper-lazy-loaded {
+  object-fit: cover !important;
+  width: 100% !important;
+  max-width: none !important;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: grey;
+}
+
+.swiper-wrapper {
+  padding: 100px 0;
+}
+
+.swiper-slide {
+  transition: 250ms all;
+}
+
+.swiper-slide:hover {
+  transform: scaleX(2) scaleY(1.5);
+  z-index: 20;
+  object-fit: cover;
+}
+
+.swiper-slide:first-child:hover {
+  margin: 0 100px;
+}
+
+.background {
+  background-color: rgba(0, 0, 0, 0.95);
+  position: absolute;
+  bottom: 0;
+  height: 80%;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  display: none;
+}
+
+.swiper-slide:hover .background {
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-info {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.carousel-icons {
+  margin: 1rem 0;
+}
+
+.carousel-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.carousel-description p {
+  font-size: 10px;
+  text-align: left;
+  color: grey;
+}
+
+.carousel h2 {
+  text-align: left;
+  padding: 2rem;
+}

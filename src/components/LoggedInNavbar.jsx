@@ -1,5 +1,6 @@
 // npm
 import { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMagnifyingGlass,
@@ -22,12 +23,15 @@ export default function Navbar() {
   // methods
   onScroll(setIsScrolled);
 
+  // properties
+  const navigate = useNavigate();
+
   return (
     <nav className={isScrolled ? "navbar active" : "navbar"}>
       <div className="navbar-container">
         <div className="navbar-content">
           <div className="navbar-logo">
-            <img src={logo} alt="netflix logo" />
+            <img src={logo} alt="netflix logo" onClick={() => navigate("/")} />
           </div>
           <div className="desktop-navigation">
             <span>Home</span>

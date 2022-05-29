@@ -15,9 +15,9 @@
 @import "./organisms/landing.css";
 @import "./organisms/landingHome.css";
 @import "./organisms/navbar.css";
-@import "./organisms/slide.css";
 @import "./organisms/admin.css";
 @import "./organisms/adminCategory.css";
+@import "./organisms/carousel.css";
 
 /* templates */
 @import "./templates/modal.css";
