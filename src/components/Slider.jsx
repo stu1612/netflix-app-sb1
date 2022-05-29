@@ -8,9 +8,8 @@ import {
 
 // files
 import SlideItem from "./SlideItem";
-import carouselScroll from "../scripts/carouselScroll";
 
-export default function Slider() {
+export default function Slider({ movies }) {
   // local state
   const [slideIndex, setSlideIndex] = useState(0);
   const [activeSlide, setActiveSlide] = useState(false);
@@ -29,6 +28,10 @@ export default function Slider() {
       sliderRef.current.style.transform = `translateX(${-290 + distance}px)`;
     }
   };
+
+  // componets
+  const mappedItems =
+    movies && movies.map((item) => <SlideItem key={item.id} item={item} />);
   return (
     <div className="slider">
       <span className="splider-title">Continue watching</span>
@@ -40,13 +43,14 @@ export default function Slider() {
           style={{ display: !activeSlide && "none" }}
         />
         <div className="slider-container" ref={sliderRef}>
+          {mappedItems}
+          {/* <SlideItem />
           <SlideItem />
           <SlideItem />
           <SlideItem />
           <SlideItem />
           <SlideItem />
-          <SlideItem />
-          <SlideItem />
+          <SlideItem /> */}
         </div>
         <FontAwesomeIcon
           icon={faChevronRight}

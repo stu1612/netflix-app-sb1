@@ -14,12 +14,10 @@ export default function Home() {
   // methods
   useLoad(path, setMovies);
 
-  console.log(movies);
-
   return (
     <div>
       <Landing />
-      <Slider />
+      <Slider movies={movies} />
       <Slider />
       <Slider />
       <Slider />

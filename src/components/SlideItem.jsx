@@ -7,7 +7,8 @@ import { faPlay, faHeart, faAdd } from "@fortawesome/free-solid-svg-icons";
 // files
 import img from "../assets/images/community.jpg";
 
-export default function SlideItem() {
+export default function SlideItem({ item }) {
+  const { thumbnail } = item;
   // local state
   const [isHovered, setIsHovered] = useState(false);
   return (
@@ -16,7 +17,7 @@ export default function SlideItem() {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <img src={img} alt="community" />
+      <img src={thumbnail} alt="community" />
       {isHovered && (
         <>
           <ReactPlayer

@@ -10,6 +10,7 @@ export default function AppContextProvider({ children }) {
   const [optionValue, setOptionValue] = useState("action");
   const [categoryData, setCategoryData] = useState([]);
   const [seasons, setSeasons] = useState([]);
+  const [selectValue, setSelectValue] = useState("Blockbuster Movies");
 
   return (
     <AppContext.Provider
@@ -26,6 +27,8 @@ export default function AppContextProvider({ children }) {
         setCategoryData,
         seasons,
         setSeasons,
+        selectValue,
+        setSelectValue,
       }}
     >
       {children}

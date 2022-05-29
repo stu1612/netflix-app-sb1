@@ -38,9 +38,7 @@
 .input-box small {
   color: var(--orange);
   position: absolute;
-  /* bottom: 60px; */
   bottom: -20px;
-
   font-size: 12px;
   left: 0;
 }
@@ -59,6 +57,7 @@
 
 .dark-bg {
   background-color: rgba(0, 0, 0, 0.75) !important;
+  color: var(--white);
 }
 
 @media (min-width: 760px) {

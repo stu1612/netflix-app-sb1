@@ -13,11 +13,10 @@
     "required": true,
     "type": "text"
   },
-
-  "time": {
+  "search": {
     "autoFocus": false,
-    "label": "Duration of movie",
-    "placeholder": "2hr35",
+    "label": "Search value",
+    "placeholder": "Ex: comedy",
     "required": true,
     "type": "text"
   },
@@ -38,9 +37,9 @@
   "age": {
     "autoFocus": false,
     "label": "Age Check",
-    "placeholder": "13",
+    "placeholder": "12",
     "required": true,
-    "type": "text"
+    "type": "number"
   },
   "year": {
     "autoFocus": false,
