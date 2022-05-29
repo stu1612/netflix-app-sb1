@@ -2,7 +2,6 @@ import { useState } from "react";
 
 // files
 import Landing from "../../components/Landing";
-// import Slider from "../../components/Slider";
 import Carousel from "../../components/Carousel";
 import useLoad from "../../hooks/useLoad";
 
@@ -15,14 +14,14 @@ export default function Home() {
   // methods
   useLoad(path, setMovies);
 
+  const filteredArr = movies.filter(
+    (item) => item.search === "Blockbuster Movies"
+  );
+
   return (
     <div>
       <Landing />
       <Carousel movies={movies} />
-      {/* <Slider />
-      <Slider />
-      <Slider />
-      <Slider /> */}
     </div>
   );
 }

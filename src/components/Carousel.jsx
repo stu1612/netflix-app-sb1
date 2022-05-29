@@ -10,6 +10,7 @@ import CarouselItem from "./CarouselItem";
 
 export default function Carousel({ movies }) {
   // components
+
   const mappedItems =
     movies &&
     movies.map((item) => (
@@ -22,11 +23,25 @@ export default function Carousel({ movies }) {
     <div className="carousel">
       <h2>Blockbuster Movies</h2>
       <Swiper
-        slidesPerView={8}
+        slidesPerView={1}
         spaceBetween={10}
-        slidesPerGroup={3}
+        slidesPerGroup={1}
         loop={false}
         loopFillGroupWithBlank={true}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 5,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 8,
+            spaceBetween: 50,
+          },
+        }}
         navigation={true}
         modules={[Pagination, Navigation]}
         className="mySwiper"
