@@ -1,6 +1,6 @@
 // npm
 import { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // files
 import { AuthContext } from "../contexts/AuthContext";
@@ -14,9 +14,6 @@ export default function CompleteLogin({ emailState, passState, onLogin }) {
   // local state
   const [email, setEmail] = emailState;
   const [password, setPassword] = passState;
-
-  // properties
-  const navigate = useNavigate();
 
   return (
     <section id="login">
