@@ -1,6 +1,6 @@
 // npm
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // files
 import { AuthContext } from "../contexts/AuthContext";
@@ -14,6 +14,9 @@ export default function CompleteLogin({ emailState, passState, onLogin }) {
   // local state
   const [email, setEmail] = emailState;
   const [password, setPassword] = passState;
+
+  // properties
+  const navigate = useNavigate();
 
   return (
     <section id="login">
@@ -55,7 +58,12 @@ export default function CompleteLogin({ emailState, passState, onLogin }) {
           </form>
           <div className="sign-up-notice">
             <h3>
-              New to Netflix? <span>Register Now.</span>
+              New to Netflix? {""}
+              <span>
+                <Link to="/signup/regform" state={{ data: "" }}>
+                  Register Now.
+                </Link>
+              </span>
             </h3>
             <p>
               This page is protected by Google reCAPTCHA to confirm that you are
