@@ -3,17 +3,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 
 // files
-import img from "../assets/images/squid-games.jpeg";
-import logo from "../assets/images/squid-game-logo.png";
+import img from "../assets/images/jumbotron-logo.png";
 
-export default function Landing() {
+export default function Jumbotron() {
   return (
-    <div className="hero">
-      <img src={img} alt="squid games poster" />
-      <div className="hero-info">
-        <img src={logo} alt="squid game logo" className="hero-image-logo" />
+    <div className="jumbotron">
+      <div className="jumbotron--bio">
+        <img src={img} alt="The Batman movie poster" />
 
-        <div className="hero-buttons">
+        <p>
+          When a sadistic serial killer begins murdering key political figures
+          in Gotham, Batman is forced to investigate the city's hidden
+          corruption and question his family's involvement.
+        </p>
+
+        <div className="jumbotron--buttons">
           <button className="hero-btn play">
             <FontAwesomeIcon icon={faPlay} />
             <span>Play</span>

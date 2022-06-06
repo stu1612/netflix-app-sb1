@@ -13,7 +13,7 @@
 
 /* organisms */
 @import "./organisms/landing.css";
-@import "./organisms/landingHome.css";
+@import "./organisms/jumbotron.css";
 @import "./organisms/navbar.css";
 @import "./organisms/admin.css";
 @import "./organisms/adminCategory.css";

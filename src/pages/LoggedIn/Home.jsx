@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 // files
-import Landing from "../../components/Landing";
+import Jumbotron from "../../components/Jumbotron";
 import Carousel from "../../components/Carousel";
 import useLoad from "../../hooks/useLoad";
 
@@ -20,8 +20,8 @@ export default function Home() {
 
   return (
     <div>
-      <Landing />
-      <Carousel movies={movies} />
+      <Jumbotron />
+      {/* <Carousel movies={movies} /> */}
     </div>
   );
 }
