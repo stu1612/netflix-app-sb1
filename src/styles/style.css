@@ -18,6 +18,7 @@
 @import "./organisms/admin.css";
 @import "./organisms/adminCategory.css";
 @import "./organisms/carousel.css";
+@import "./organisms/slider.css";
 
 /* templates */
 @import "./templates/modal.css";
