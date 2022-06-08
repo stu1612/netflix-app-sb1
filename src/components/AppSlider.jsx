@@ -1,23 +1,19 @@
 // npm
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChevronLeft,
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
-
+import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import Slider from "react-slick";
 
 // files
 import data from "../data/images.json";
+import breakpoints from "../data/sliderBreakpointSettings.json";
 
+// methods
 function PrevArrow({ onClick }) {
   return (
     <button
       onClick={onClick}
       style={{ backgroundColor: "transparent", border: "none" }}
-      className="btn__custom-slider btn-left"
     >
-      <FontAwesomeIcon icon={faChevronLeft} className="fa-icon previous" />
+      <BsChevronLeft className="slider-fa-icon previous" size={46} />
     </button>
   );
 }
@@ -27,9 +23,8 @@ function NextArrow({ onClick }) {
     <button
       onClick={onClick}
       style={{ backgroundColor: "transparent", border: "none" }}
-      className="btn__custom-slider btn-next"
     >
-      <FontAwesomeIcon icon={faChevronRight} className="fa-icon next" />
+      <BsChevronRight className="slider-fa-icon next" size={46} />
     </button>
   );
 }
@@ -44,51 +39,18 @@ export default function AppSlider() {
     initialSlide: 0,
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
-    responsive: [
-      {
-        breakpoint: 1400,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
-          infinite: true,
-        },
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          initialSlide: 0,
-        },
-      },
-      {
-        breakpoint: 920,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: true,
-          initialSlide: 0,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 0,
-        },
-      },
-    ],
+    responsive: breakpoints,
   };
 
+  // components
   const mappedItems = data.map((item) => (
-    <div key={item.id} className="item">
+    <div key={item.id} className="slider">
       <img src={require(`../assets/images/${item.img}`)} alt="fdfd" />
     </div>
   ));
+
   return (
-    <div>
+    <div className="slider-container">
       <h2 className="slider-title">Blockbuster movies</h2>
       <Slider {...settings}>{mappedItems}</Slider>
     </div>

@@ -79,7 +79,7 @@
   flex-direction: column;
 }
 
-@media (min-width: 76rem) {
+@media (min-width: 760px) {
   .navbar--container__left img {
     height: 4.75rem;
     margin-right: 4rem;
@@ -91,7 +91,7 @@
     display: none;
   }
 }
-@media (min-width: 92rem) {
+@media (min-width: 920px) {
   .navbar--container {
     padding: 1.5rem 3.5rem;
   }
