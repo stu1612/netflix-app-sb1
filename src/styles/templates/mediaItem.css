@@ -1,0 +1,55 @@
+.media-item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+}
+
+.img-wrapper {
+  height: 300px;
+}
+
+.img-wrapper img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+
+.media-item__shape {
+  padding: 4rem 2rem;
+}
+
+.media-buttons {
+  position: absolute;
+  top: 50%;
+}
+
+.play {
+  padding: 0.5rem 2rem;
+  border-radius: 4px;
+}
+
+.media-icon {
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  background-color: transparent;
+  border: 1px solid var(--light-grey);
+  border-radius: 100px;
+}
+
+.media-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.media-content__bio {
+  background-color: red;
+  flex: 2;
+}
+
+.media-content__genre {
+  background-color: blue;
+  flex: 1;
+}

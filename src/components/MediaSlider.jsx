@@ -1,10 +1,13 @@
 // npm
+import { useContext } from "react";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import Slider from "react-slick";
 
 // files
+import { ModalContext } from "../contexts/ModalContext";
 import data from "../data/images.json";
 import breakpoints from "../data/sliderBreakpointSettings.json";
+import MediaItem from "./MediaItem";
 
 // methods
 function PrevArrow({ onClick }) {
@@ -29,7 +32,11 @@ function NextArrow({ onClick }) {
   );
 }
 
-export default function AppSlider() {
+export default function MediaSlider() {
+  // global state
+  const { setIsModal } = useContext(ModalContext);
+
+  // properties
   let settings = {
     dots: false,
     infinite: false,
@@ -44,7 +51,11 @@ export default function AppSlider() {
 
   // components
   const mappedItems = data.map((item) => (
-    <div key={item.id} className="slider">
+    <div
+      key={item.id}
+      className="slider"
+      onClick={() => setIsModal(<MediaItem />)}
+    >
       <img src={require(`../assets/images/${item.img}`)} alt="fdfd" />
     </div>
   ));

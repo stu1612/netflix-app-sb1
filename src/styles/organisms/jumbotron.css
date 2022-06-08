@@ -5,9 +5,10 @@
   background-image: url("../../assets/images/jumbotron.jpeg"),
     linear-gradient(
       rgba(11, 11, 11, 0) 0%,
-      rgba(11, 11, 11, 0.4) 50%,
-      rgba(11, 11, 11, 0.8) 70%,
-      rgba(11, 11, 11, 1) 80%
+      rgba(11, 11, 11, 0.2) 50%,
+      rgba(11, 11, 11, 0.6) 70%,
+      rgba(11, 11, 11, 0.9) 80%,
+      rgba(11, 11, 11, 1) 100%
     );
   background-size: cover;
   background-position: center;
@@ -66,7 +67,10 @@
   color: var(--white);
 }
 
-@media (min-width: 76rem) {
+@media (min-width: 760px) {
+  .jumbotron--bio {
+    bottom: 10rem;
+  }
   .jumbotron--bio img {
     width: 30rem;
   }
@@ -76,15 +80,19 @@
   }
 }
 
-@media (min-width: 92rem) {
+@media (min-width: 920px) {
+  .jumbotron {
+    height: 120vh;
+  }
+
   .jumbotron--bio {
     left: 10rem;
     right: 2rem;
-    bottom: 15rem;
+    bottom: 35rem;
   }
 
   .jumbotron--bio p {
-    width: 50%;
+    width: 30%;
     line-height: 1.6;
     letter-spacing: 0.2rem;
     font-size: 1.7rem;

@@ -3,7 +3,7 @@ import { useState } from "react";
 // files
 import Jumbotron from "../../components/Jumbotron";
 import Carousel from "../../components/Carousel";
-import AppSlider from "../../components/AppSlider";
+import MediaSlider from "../../components/MediaSlider";
 import useLoad from "../../hooks/useLoad";
 
 export default function Home() {
@@ -15,14 +15,16 @@ export default function Home() {
   // methods
   useLoad(path, setMovies);
 
-  const filteredArr = movies.filter(
-    (item) => item.search === "Blockbuster Movies"
-  );
+  // const filteredArr = movies.filter(
+  //   (item) => item.search === "Blockbuster Movies"
+  // );
 
   return (
-    <div>
+    <div className="home">
       <Jumbotron />
-      <AppSlider />
+      <div className="medias">
+        <MediaSlider />
+      </div>
       {/* <Carousel movies={movies} /> */}
     </div>
   );
