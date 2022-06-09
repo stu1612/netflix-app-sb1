@@ -43,7 +43,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-@media (min-width: 920px) {
+@media (min-width: 1200px) {
   .medias {
     position: relative;
     bottom: 15rem;

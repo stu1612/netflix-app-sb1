@@ -1,36 +1,29 @@
 // npm
+import { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPlay,
-  faAdd,
-  faThumbsUp,
-  faThumbsDown,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
 // files
+import { ModalContext } from "../contexts/ModalContext";
+import MediaButtons from "./MediaButtons";
 import img from "../assets/images/img7.webp";
 
 export default function MediaItem() {
+  // global state
+  const { setIsModal } = useContext(ModalContext);
   return (
     <div className="media-item">
+      <FontAwesomeIcon
+        icon={faCircleXmark}
+        className="close-icon"
+        onClick={() => setIsModal(null)}
+      />
       <div className="img-wrapper">
         <img src={img} alt="dsad" />
+        <MediaButtons />
+        <div className="bg-overlay"></div>
       </div>
       <div className="media-item__shape">
-        <div className="media-buttons">
-          <button className="play">
-            <FontAwesomeIcon icon={faPlay} /> <span>Play</span>
-          </button>
-          <button className="media-icon">
-            <FontAwesomeIcon icon={faAdd} color={"white"} />
-          </button>
-          <button className="media-icon">
-            <FontAwesomeIcon icon={faThumbsUp} color={"white"} />
-          </button>
-          <button className="media-icon">
-            <FontAwesomeIcon icon={faThumbsDown} color={"white"} />
-          </button>
-        </div>
         <div className="media-content">
           <div className="media-content__bio">
             <div className="media-content__information">
@@ -47,13 +40,13 @@ export default function MediaItem() {
               </p>
             </div>
           </div>
-          <div className="media-content__genre">
-            <div className="cast">
-              <h3>Cast</h3>
+          <div className="media-content__details">
+            <div className="detail">
+              <span>Cast:</span>
               <span>Josh Radnor, Jason Segel, Neil Patrick</span>
             </div>
-            <div className="genre">
-              <h3>Genres</h3>
+            <div className="detail">
+              <span>Genres:</span>
               <span>Romantic, TV Comedy, Sitcoms</span>
             </div>
           </div>

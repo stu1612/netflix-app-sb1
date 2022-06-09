@@ -2,11 +2,14 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  border-radius: 5px;
   height: 100%;
+  width: 90%;
 }
 
 .img-wrapper {
-  height: 300px;
+  width: 100%;
+  position: relative;
 }
 
 .img-wrapper img {
@@ -14,42 +17,147 @@
   width: 100%;
   object-fit: cover;
   aspect-ratio: 16 / 9;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .media-item__shape {
-  padding: 4rem 2rem;
+  padding: 1rem;
+  margin-top: 2rem;
 }
 
 .media-buttons {
   position: absolute;
-  top: 50%;
+  bottom: -5%;
+  left: 5%;
+  z-index: 30;
 }
 
 .play {
-  padding: 0.5rem 2rem;
+  padding: 0.6rem 2.2rem;
   border-radius: 4px;
 }
 
+.play span {
+  padding-left: 0.6rem;
+}
+
 .media-icon {
-  padding: 0.5rem;
+  padding: 0.6rem;
   margin-left: 0.5rem;
-  background-color: transparent;
+  background-color: rgb(24, 24, 24);
   border: 1px solid var(--light-grey);
   border-radius: 100px;
 }
 
 .media-content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
 }
 
 .media-content__bio {
-  background-color: red;
+  font-size: 1.2rem;
   flex: 2;
 }
 
-.media-content__genre {
-  background-color: blue;
+.media-content__information {
+  text-align: center;
+}
+
+.media-content__information span {
+  padding: 0 0.6rem;
+}
+
+.age {
+  border: 1px solid white;
+  padding: 0 0.6rem;
+}
+
+.seasons {
+  font-weight: bolder;
+}
+
+.media-content__description {
+  margin-top: 1.5rem;
+}
+
+.media-content__description p {
+  font-size: 1.3rem;
+  text-align: justify;
+}
+
+.media-content__details {
   flex: 1;
+}
+
+.detail {
+  font-size: 1.2rem;
+  margin: 2rem 0;
+}
+
+.detail span:nth-child(1) {
+  color: var(--grey);
+  padding-right: 0.5rem;
+}
+
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    transparent,
+    rgba(24, 24, 24, 0.3) 30%,
+    rgba(24, 24, 24, 0.7) 70%,
+    rgba(24, 24, 24, 1) 100%
+  );
+}
+
+.close-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 2.5rem;
+  z-index: 30;
+  border-radius: 100px;
+  color: rgb(24, 24, 24);
+  background-color: var(--light-grey);
+  cursor: pointer;
+}
+
+@media (min-width: 760px) {
+  .media-item {
+    width: min-content;
+  }
+  .img-wrapper img {
+    width: auto;
+    object-fit: contain;
+  }
+
+  .media-item__shape {
+    padding: 4rem 2rem;
+  }
+
+  .media-content {
+    flex-direction: row;
+  }
+
+  .media-content__bio {
+    padding-right: 3rem;
+  }
+
+  .media-content__information {
+    text-align: justify;
+    margin-left: 0.5rem;
+  }
+
+  .detail {
+    margin: 0;
+  }
+
+  .detail:nth-child(1) {
+    margin-bottom: 1.5rem;
+  }
 }
