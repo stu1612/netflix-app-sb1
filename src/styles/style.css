@@ -1,7 +1,7 @@
 /* base */
-@import "./_base/layout.css";
-@import "./_base/colors.css";
-@import "./_base/typography.css";
+@import "./base/layout.css";
+@import "./base/colors.css";
+@import "./base/typography.css";
 
 /* atoms */
 @import "./atoms/buttons.css";

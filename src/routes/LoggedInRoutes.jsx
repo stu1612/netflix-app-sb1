@@ -7,7 +7,7 @@ import AdminCategory from "../pages/LoggedIn/AdminCategory";
 import AdminCategoryItem from "../pages/LoggedIn/AdminCategoryItem";
 import AdminCategorySubItem from "../pages/LoggedIn/AdminCategorySubItem";
 import Home from "../pages/LoggedIn/Home";
-import LoggedInNavbar from "../components/LoggedInNavbar";
+import LoggedInNavbar from "../components/navigation/LoggedInNavbar";
 // files
 import Watch from "../pages/LoggedIn/Watch";
 

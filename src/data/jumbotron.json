@@ -1,0 +1,15 @@
+{
+  "jumbotronItem": {
+    "title": "The Batman",
+    "cover": "jumbotron.jpeg",
+    "logo": "jumbotron-logo.png",
+    "modalImg": "jumbotron-bg.jpeg",
+    "text": "When a sadistic serial killer begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.",
+    "year": "2022",
+    "age": "13",
+    "time": "2h56",
+    "genre": "action, crime, drama",
+    "cast": "Robert Pattinson, Zoe Kravitz, Jeffrey Wright",
+    "videoId": "https://www.youtube.com/watch?v=mqqft2x_Aa4"
+  }
+}

@@ -1,0 +1,54 @@
+@import "./variables";
+@import "./fonts";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $color-black;
+  color: $color-white;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  font-family: "NetflixRegular";
+  overflow-x: hidden;
+}
+
+a,
+li {
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+input,
+textarea {
+  outline: none;
+  border: none;
+}
+
+button,
+input[type="submit"] {
+  outline: none;
+  border: none;
+}
+
+button:hover,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+  .medias {
+    position: relative;
+    bottom: 15rem;
+  }
+}

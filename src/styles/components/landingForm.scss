@@ -1,0 +1,27 @@
+.email-form {
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  width: min(90%, 860px);
+
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+// .email-form form input {
+//   width: 100%;
+//   padding: 1.25rem;
+//   height: 100%;
+//   margin-right: 2px;
+// }
+
+@media (min-width: $media-tablet-md) {
+  .email-form form {
+    flex-direction: row;
+  }
+}

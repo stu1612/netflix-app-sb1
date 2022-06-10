@@ -6,11 +6,16 @@ import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 // files
 import { ModalContext } from "../contexts/ModalContext";
 import MediaButtons from "./MediaButtons";
-import img from "../assets/images/img7.webp";
+import img from "../assets/images/jumbotron-bg.jpeg";
 
-export default function MediaItem() {
+export default function MediaItem({ item, data }) {
   // global state
   const { setIsModal } = useContext(ModalContext);
+
+  // properties
+  const { year, age, time, text, cast, genre, modalImg, title } =
+    data.jumbotronItem;
+
   return (
     <div className="media-item">
       <FontAwesomeIcon
@@ -19,7 +24,9 @@ export default function MediaItem() {
         onClick={() => setIsModal(null)}
       />
       <div className="img-wrapper">
-        <img src={img} alt="dsad" />
+        {/* <img src={require(`../assets/images/${modalImg}`)} alt={title} /> */}
+        <img src={img} alt={title} />
+
         <MediaButtons />
         <div className="bg-overlay"></div>
       </div>
@@ -27,27 +34,23 @@ export default function MediaItem() {
         <div className="media-content">
           <div className="media-content__bio">
             <div className="media-content__information">
-              <span className="year">2014</span>
-              <span className="age">13+</span>
-              <span className="seasons">9 Seasons</span>
+              <span className="year">{year}</span>
+              <span className="age">{age}</span>
+              <span className="time">{time}</span>
+              {/* <span className="seasons">9 Seasons</span> */}
             </div>
             <div className="media-content__description">
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Placeat dignissimos aspernatur recusandae. Quia dolor eius
-                laboriosam, reprehenderit omnis nemo rerum quas architecto
-                reiciendis quaerat dolorem modi labore, est, corporis ea?
-              </p>
+              <p>{text}</p>
             </div>
           </div>
           <div className="media-content__details">
             <div className="detail">
               <span>Cast:</span>
-              <span>Josh Radnor, Jason Segel, Neil Patrick</span>
+              <span>{cast}</span>
             </div>
             <div className="detail">
               <span>Genres:</span>
-              <span>Romantic, TV Comedy, Sitcoms</span>
+              <span>{genre}</span>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 // npm
 import { Routes, Route } from "react-router-dom";
-import LoggedOutNavbar from "../components/LoggedOutNavbar";
+import LoggedOutNavbar from "../components/navigation/LoggedOutNavbar";
 
 // files
 import Landing from "../pages/LoggedOut/Landing";

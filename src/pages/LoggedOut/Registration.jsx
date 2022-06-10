@@ -21,8 +21,8 @@ export default function Registration() {
         </div>
         <div className="register-body">
           <p>
-            Netflix is personalizes for you. Create a password to view which
-            devices you want, whenver you want.
+            Netflix is personalized for you. Complete your registration to watch
+            what you want, whenever you want.
           </p>
         </div>
         <div className="submit-btn-container">

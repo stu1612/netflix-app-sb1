@@ -35,10 +35,13 @@
   text-transform: uppercase;
   font-family: NetflixRegular, Arial, Helvetica, sans-serif;
   font-weight: 500;
+  color: var(--grey);
+  margin-bottom: 1rem;
 }
 
 .bolder {
   font-weight: 800;
+  color: var(--shade);
 }
 
 .registration-title {
@@ -48,7 +51,7 @@
 }
 
 .register-body {
-  padding: 1rem 0;
+  padding: 2rem 0 4rem 0;
 }
 
 .register-body p {

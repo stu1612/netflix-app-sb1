@@ -5,11 +5,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faBell } from "@fortawesome/free-solid-svg-icons";
 
 // files
-import { AuthContext } from "../contexts/AuthContext";
-import logo from "../assets/images/netflix-logo-png-2562.png";
-import onScroll from "../scripts/onScroll";
-import user from "../assets/images/netflix-avatar.png";
-import data from "../data/navigation.json";
+import { AuthContext } from "../../contexts/AuthContext";
+import logo from "../../assets/images/netflix-logo-png-2562.png";
+import onScroll from "../../scripts/onScroll";
+import user from "../../assets/images/netflix-avatar.png";
+import data from "../../data/navigation.json";
 
 export default function Navbar() {
   // global state

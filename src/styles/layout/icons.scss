@@ -1,0 +1,12 @@
+// navbar
+.nav-icon {
+  margin: 0 1.5rem;
+  cursor: pointer;
+  height: 1.5rem;
+}
+
+@media (min-width: $media-tablet-lg) {
+  .nav-icon {
+    height: 2rem;
+  }
+}

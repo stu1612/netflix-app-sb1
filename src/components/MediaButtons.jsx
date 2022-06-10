@@ -11,7 +11,8 @@ export default function MediaButtons() {
   return (
     <div className="media-buttons">
       <button className="play">
-        <FontAwesomeIcon icon={faPlay} /> <span>Play</span>
+        <FontAwesomeIcon icon={faPlay} />
+        <span>Play</span>
       </button>
       <button className="media-icon">
         <FontAwesomeIcon icon={faAdd} color={"white"} />

@@ -61,15 +61,17 @@
   padding-left: 0.5rem;
 }
 
+.hero-play {
+  background-color: var(--white);
+  color: var(--black);
+}
+
 .info {
   background-color: rgb(64, 58, 58);
   color: var(--white);
 }
 
 @media (min-width: 760px) {
-  /* .jumbotron--bio {
-    bottom: 10rem;
-  } */
   .jumbotron--bio img {
     width: 30rem;
   }
