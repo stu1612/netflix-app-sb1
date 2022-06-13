@@ -1,7 +1,7 @@
 // files
 import SignUpForm from "./forms/SignUpForm";
 
-export default function CompleteSignUp({ emailState, passState, onSignUp }) {
+export default function CompleteSignUp({ onSignUp, passState, emailState }) {
   return (
     <section id="signup">
       <div className="signup">
@@ -18,8 +18,8 @@ export default function CompleteSignUp({ emailState, passState, onSignUp }) {
         </div>
         <div className="signup-form">
           <SignUpForm
-            emailState={emailState}
             passState={passState}
+            emailState={emailState}
             onSignUp={onSignUp}
           />
         </div>

@@ -2,38 +2,41 @@
 import { useContext } from "react";
 // files
 import { AuthContext } from "../../contexts/AuthContext";
-import form from "../../data/signUp.json";
+import form from "../../data/signup.json";
 import UserInputField from "../UserInputField";
-import validateEmail from "../../scripts/validateEmail";
 import validateString from "../../scripts/validateString";
+import validateEmail from "../../scripts/validateEmail";
 
-export default function SignUpForm({ emailState, passState, onSignUp }) {
+export default function SignUpForm({ passState, emailState, onSignUp }) {
   // global state
   const { username, setUsername } = useContext(AuthContext);
 
   // local state
-  const [confirmEmail, setConfirmEmail] = emailState;
   const [password, setPassword] = passState;
+  const [newEmail, setNewEmail] = emailState;
 
   return (
     <form onSubmit={onSignUp}>
       <UserInputField
-        setup={form.email}
-        state={[confirmEmail, setConfirmEmail]}
-        validation={validateEmail}
         classname="input-padding"
+        inputStyle={null}
+        setup={form.email}
+        state={[newEmail, setNewEmail]}
+        validation={validateEmail}
       />
       <UserInputField
+        classname="input-padding"
+        inputStyle={null}
         setup={form.username}
         state={[username, setUsername]}
         validation={validateString}
-        classname="input-padding"
       />
       <UserInputField
+        classname="input-padding"
+        inputStyle={null}
         setup={form.password}
         state={[password, setPassword]}
         validation={validateString}
-        classname="input-padding"
       />
       <div className="email-preference">
         <input type="checkbox" />

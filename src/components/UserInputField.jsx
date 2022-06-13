@@ -4,13 +4,13 @@ import { useState } from "react";
 import onValidate from "../scripts/validateInput";
 
 export default function UserInputField({
-  classname,
-  inputStyle,
   setup,
   state,
   validation,
+  classname,
+  inputStyle,
 }) {
-  const { text, type, required, autoFocus } = setup;
+  const { text, autoFocus, type, required } = setup;
   const [getter, setter] = state;
   const [errorMessage, setErrorMessage] = useState("");
 

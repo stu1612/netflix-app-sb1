@@ -43,6 +43,23 @@ input[type="submit"] {
   cursor: pointer;
 }
 
+.error-container {
+  background-color: white;
+  padding: 5rem 1rem;
+  width: min(95%, 900px);
+  border-radius: 5px;
+}
+
+.error-container p {
+  color: black;
+  margin-bottom: 2rem;
+}
+
+.error-container button {
+  display: block;
+  margin: 0 auto;
+}
+
 @media (min-width: 1200px) {
   .medias {
     position: relative;

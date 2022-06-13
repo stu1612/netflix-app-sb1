@@ -5,12 +5,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 // files
-import form from "../../data/signUp.json";
-import validateEmail from "../../scripts/validateEmail";
+import form from "../../data/signup.json";
 import UserInputField from "../../components/UserInputField";
+import validateEmail from "../../scripts/validateEmail";
 
 export default function Landing() {
-  // global state
+  // local state
   const [email, setEmail] = useState("");
 
   return (
@@ -25,10 +25,11 @@ export default function Landing() {
         <div className="email-form">
           <form>
             <UserInputField
+              classname="input-signup"
+              inputStyle={null}
               setup={form.email}
               state={[email, setEmail]}
               validation={validateEmail}
-              classname="input-signup"
             />
             <Link
               className={`button-signup ${email ? "active" : "disabled"}`}

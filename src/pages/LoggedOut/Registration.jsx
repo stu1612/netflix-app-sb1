@@ -2,10 +2,9 @@
 import { Link, useLocation } from "react-router-dom";
 
 export default function Registration() {
-  // properties
   const location = useLocation();
-  const email = location.state.data[0];
 
+  const email = location.state.data[0];
   return (
     <section id="registration">
       <div className="registration">

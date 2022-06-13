@@ -1,6 +1,6 @@
 // npm
 import { useState, useContext } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 // files
 import { AuthContext } from "../../contexts/AuthContext";
@@ -14,6 +14,7 @@ import firebaseErrors from "../../data/firebaseError.json";
 export default function SignUp() {
   // properties
   const navigate = useNavigate();
+
   const location = useLocation();
   const email = location.state.data;
 
@@ -22,8 +23,8 @@ export default function SignUp() {
   const { setIsModal } = useContext(ModalContext);
 
   // local state
-  const [confirmEmail, setConfirmEmail] = useState(email);
   const [password, setPassword] = useState("");
+  const [newEmail, setNewEmail] = useState(email);
 
   // methods
   async function onSignUp(event) {
@@ -36,7 +37,7 @@ export default function SignUp() {
   }
 
   async function createUID() {
-    const uid = await createUser(confirmEmail, password);
+    const uid = await createUser(newEmail, password);
     return uid;
   }
 
@@ -59,8 +60,8 @@ export default function SignUp() {
 
   return (
     <CompleteSignUp
-      emailState={[confirmEmail, setConfirmEmail]}
       passState={[password, setPassword]}
+      emailState={[newEmail, setNewEmail]}
       onSignUp={onSignUp}
     />
   );

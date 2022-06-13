@@ -9,9 +9,11 @@ export default function AuthModalErrorMessage({ message }) {
   const { setIsModal } = useContext(ModalContext);
 
   return (
-    <div>
-      <h2>{message}</h2>
-      <button onClick={() => setIsModal(null)}>close</button>
+    <div className="error-container">
+      <p>{message}</p>
+      <button className="cta-red" onClick={() => setIsModal(null)}>
+        close
+      </button>
     </div>
   );
 }
