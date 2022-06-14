@@ -8,7 +8,7 @@ import { loginUser } from "../../firebase/fireAuth";
 import { ModalContext } from "../../contexts/ModalContext";
 import CompleteLogin from "../../components/CompleteLogin";
 import firebaseErrors from "../../data/firebaseError.json";
-import AuthModalErrorMessage from "../../components/AuthModalErrorMessage";
+import ErrorMessage from "../../components/ErrorMessage";
 
 export default function Login() {
   // global state
@@ -38,7 +38,7 @@ export default function Login() {
   function onFail(error) {
     const message = firebaseErrors[error.code] || firebaseErrors["default"];
     console.error(error.code);
-    setIsModal(<AuthModalErrorMessage message={message} />);
+    setIsModal(<ErrorMessage message={message} />);
   }
 
   return (

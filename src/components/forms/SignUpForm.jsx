@@ -3,9 +3,9 @@ import { useContext } from "react";
 // files
 import { AuthContext } from "../../contexts/AuthContext";
 import form from "../../data/signup.json";
-import UserInputField from "../UserInputField";
-import validateString from "../../scripts/validateString";
+import Input from "../Input";
 import validateEmail from "../../scripts/validateEmail";
+import validateString from "../../scripts/validateString";
 
 export default function SignUpForm({ passState, emailState, onSignUp }) {
   // global state
@@ -17,21 +17,21 @@ export default function SignUpForm({ passState, emailState, onSignUp }) {
 
   return (
     <form onSubmit={onSignUp}>
-      <UserInputField
+      <Input
         classname="input-padding"
         inputStyle={null}
         setup={form.email}
         state={[newEmail, setNewEmail]}
         validation={validateEmail}
       />
-      <UserInputField
+      <Input
         classname="input-padding"
         inputStyle={null}
         setup={form.username}
         state={[username, setUsername]}
         validation={validateString}
       />
-      <UserInputField
+      <Input
         classname="input-padding"
         inputStyle={null}
         setup={form.password}

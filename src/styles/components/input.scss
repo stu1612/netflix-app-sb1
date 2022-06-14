@@ -1,0 +1,65 @@
+#input {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: $color-white;
+    margin-bottom: 4rem;
+
+    input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1.25rem;
+        height: 100%;
+        background-color: transparent;
+
+        &:focus ~ span, :valid ~ span {
+            transform: translateX(-5px) translateY(-20px);
+            font-size: 1.2rem;
+            color: $color-light-grey;
+        }
+    }
+
+    span {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translate(-5%, -50%);
+        color: $color-grey;
+        display: inline-block;
+        transition: 0.3s;
+        pointer-events: none;
+    }
+
+    small {
+        color: $color-orange;
+        position: absolute;
+        bottom: -2rem;
+        font-size: 1.2rem;
+        left: 0;
+    }
+}
+
+// classes
+
+
+.input-padding {
+    border: 1px solid var(--grey);
+    margin-bottom: 3rem !important;
+  }
+  
+.input-login {
+    margin-bottom: 2rem !important;
+    border-radius: 5px
+
+    span {
+        color: var(--grey) !important;
+    }
+  }
+  
+  .dark-bg {
+    background-color: rgba(0, 0, 0, 0.75) !important;
+    color: white !important;
+  }
+  

@@ -10,7 +10,8 @@ import Modal from "./components/Modal";
 import ModalContextProvider from "./contexts/ModalContext";
 import FileContextProvider from "./contexts/FileContext";
 // styles
-import "./styles/style.css";
+import './styles/style.scss';
+// import "./styles/style.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 

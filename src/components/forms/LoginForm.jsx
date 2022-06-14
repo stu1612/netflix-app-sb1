@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 // files
 import { AuthContext } from "../../contexts/AuthContext";
-import UserInputField from "../UserInputField";
 import form from "../../data/login.json";
+import Input from "../Input";
 import validateString from "../../scripts/validateString";
 
 export default function LoginForm({ onLogin, emailState, passState }) {
@@ -17,13 +17,13 @@ export default function LoginForm({ onLogin, emailState, passState }) {
 
   return (
     <form onSubmit={onLogin}>
-      <UserInputField
+      <Input
         setup={form.email}
         state={[email, setEmail]}
         classname="input-login"
         inputStyle="dark-bg"
       />
-      <UserInputField
+      <Input
         setup={form.password}
         state={[password, setPassword]}
         validation={validateString}

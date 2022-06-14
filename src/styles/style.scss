@@ -1,3 +1,17 @@
 // base
 @import "./base/layout.scss";
 @import "./base/typography.scss";
+
+// classes
+@import './classes/containers.scss';
+
+// components
+@import './components/buttons.scss';
+@import './components/input.scss';
+
+// layout
+@import "./layout/icons.scss";
+@import "./layout/navbar.scss";
+
+// pages
+@import './pages/welcome.scss';

@@ -19,9 +19,7 @@ export default function CompleteLogin({ emailState, passState, onLogin }) {
             <h3>
               New to Netflix? {""}
               <span>
-                <Link to="/signup/regform" state={{ data: "" }}>
-                  Register Now.
-                </Link>
+                <Link to="/">Register Now.</Link>
               </span>
             </h3>
             <p>

@@ -7,14 +7,13 @@ import { AuthContext } from "../../contexts/AuthContext";
 import { createDocumentWithId } from "../../firebase/fireStore";
 import { createUser } from "../../firebase/fireAuth";
 import { ModalContext } from "../../contexts/ModalContext";
-import AuthModalErrorMessage from "../../components/AuthModalErrorMessage";
+import ErrorMessage from "../../components/ErrorMessage";
 import CompleteSignUp from "../../components/CompleteSignUp";
 import firebaseErrors from "../../data/firebaseError.json";
 
 export default function SignUp() {
   // properties
   const navigate = useNavigate();
-
   const location = useLocation();
   const email = location.state.data;
 
@@ -55,7 +54,7 @@ export default function SignUp() {
   function onFail(error) {
     const message = firebaseErrors[error.code] || firebaseErrors["default"];
     console.error(error.code);
-    setIsModal(<AuthModalErrorMessage message={message} />);
+    setIsModal(<ErrorMessage message={message} />);
   }
 
   return (

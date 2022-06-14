@@ -20,12 +20,12 @@ export default function Nav() {
   return (
     <nav className="navbar">
       <div className="navbar--container">
-        <div className="navbar--container__left">
+        <div className="left">
           <div className="navbar-logo">
             <img src={logo} alt="netflix logo" onClick={returnHome} />
           </div>
         </div>
-        <div className="navbar-container__right">
+        <div className="right">
           <button className="cta-red" onClick={onLogin}>
             Sign in
           </button>

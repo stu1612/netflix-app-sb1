@@ -5,10 +5,10 @@ import { useNavigate } from "react-router-dom";
 // files
 import { ModalContext } from "../../contexts/ModalContext";
 import { recoverUser } from "../../firebase/fireAuth";
-import AuthModalErrorMessage from "../../components/AuthModalErrorMessage";
+import ErrorMessage from "../../components/ErrorMessage";
 import firebaseErrors from "../../data/firebaseError.json";
 import form from "../../data/recoverPassword.json";
-import UserInputField from "../../components/UserInputField";
+import Input from "../../components/Input";
 
 export default function RecoverPassword() {
   // globalstate
@@ -29,14 +29,14 @@ export default function RecoverPassword() {
 
   function onSuccess(email) {
     const message = `We sent an email to ${email}. Check you spam folder as well.`;
-    setIsModal(<AuthModalErrorMessage message={message} />);
+    setIsModal(<ErrorMessage message={message} />);
     navigate("/login");
   }
 
   function onFail(error) {
     const message = firebaseErrors[error.code] || firebaseErrors["default"];
     console.error(error.code);
-    setIsModal(<AuthModalErrorMessage message={message} />);
+    setIsModal(<ErrorMessage message={message} />);
   }
 
   return (
@@ -49,7 +49,7 @@ export default function RecoverPassword() {
             password.
           </p>
           <form onSubmit={onRecover}>
-            <UserInputField
+            <Input
               setup={form.email}
               state={[email, setEmail]}
               classname="input-padding"

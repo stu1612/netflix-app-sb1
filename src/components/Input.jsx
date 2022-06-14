@@ -3,7 +3,7 @@ import { useState } from "react";
 // files
 import onValidate from "../scripts/validateInput";
 
-export default function UserInputField({
+export default function Input({
   setup,
   state,
   validation,
@@ -15,7 +15,7 @@ export default function UserInputField({
   const [errorMessage, setErrorMessage] = useState("");
 
   return (
-    <div className={`input-box ${classname}`}>
+    <div id='input' className={`${classname}`}>
       <input
         type={type}
         value={getter}
