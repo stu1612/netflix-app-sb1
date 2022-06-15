@@ -18,22 +18,22 @@ export default function SignUpForm({ passState, emailState, onSignUp }) {
   return (
     <form onSubmit={onSignUp}>
       <Input
-        classname="input-padding"
-        inputStyle={null}
+        divClass="grey-border"
+        inputClass={null}
         setup={form.email}
         state={[newEmail, setNewEmail]}
         validation={validateEmail}
       />
       <Input
-        classname="input-padding"
-        inputStyle={null}
+        divClass="grey-border"
+        inputClass={null}
         setup={form.username}
         state={[username, setUsername]}
         validation={validateString}
       />
       <Input
-        classname="input-padding"
-        inputStyle={null}
+        divClass="grey-border"
+        inputClass={null}
         setup={form.password}
         state={[password, setPassword]}
         validation={validateString}

@@ -40,9 +40,9 @@ export default function RecoverPassword() {
   }
 
   return (
-    <div className="landing">
-      <div className="recover-form">
-        <div className="recover-content">
+    <section id="recover">
+      <div className="container">
+        <div className="content">
           <h2>Forgot Email/Password</h2>
           <p>
             We'll send you an email with instructions on how to reset your
@@ -59,6 +59,6 @@ export default function RecoverPassword() {
           </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

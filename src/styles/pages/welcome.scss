@@ -1,4 +1,4 @@
-.welcome {
+#welcome {
   background-image: url("../../assets/images/sign_up_wallpaper.jpeg"),
     linear-gradient(
       0deg,
@@ -8,7 +8,7 @@
     );
   background-blend-mode: color;
 
-  .welcome-text {
+  .introduction {
     position: absolute;
     transform: translate(-50%, -50%);
     top: 55%;
@@ -19,7 +19,7 @@
       padding: 1rem 0;
     }
 
-    .email-container {
+    .form-container {
       margin: 2rem auto;
       display: flex;
       justify-content: center;
@@ -40,13 +40,13 @@
 }
 
 @media (min-width: $media-tablet-md) {
-  .welcome-text {
+  .introduction {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: $media-tablet-lg) {
-  .form-container form {
-    flex-direction: row;
+  .form {
+    flex-direction: row !important;
   }
 }

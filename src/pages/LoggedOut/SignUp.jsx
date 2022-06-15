@@ -7,8 +7,8 @@ import { AuthContext } from "../../contexts/AuthContext";
 import { createDocumentWithId } from "../../firebase/fireStore";
 import { createUser } from "../../firebase/fireAuth";
 import { ModalContext } from "../../contexts/ModalContext";
-import ErrorMessage from "../../components/ErrorMessage";
 import CompleteSignUp from "../../components/CompleteSignUp";
+import ErrorMessage from "../../components/ErrorMessage";
 import firebaseErrors from "../../data/firebaseError.json";
 
 export default function SignUp() {

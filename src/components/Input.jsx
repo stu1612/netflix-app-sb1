@@ -7,15 +7,15 @@ export default function Input({
   setup,
   state,
   validation,
-  classname,
-  inputStyle,
+  divClass,
+  inputClass,
 }) {
   const { text, autoFocus, type, required } = setup;
   const [getter, setter] = state;
   const [errorMessage, setErrorMessage] = useState("");
 
   return (
-    <div id='input' className={`${classname}`}>
+    <div id="input" className={`${divClass}`}>
       <input
         type={type}
         value={getter}
@@ -23,7 +23,7 @@ export default function Input({
         onBlur={() => onValidate(validation, getter, setter, setErrorMessage)}
         onChange={(event) => setter(event.target.value)}
         required={required}
-        className={inputStyle}
+        className={inputClass}
       />
       <span>{text}</span>
       <small className="error">{errorMessage}</small>

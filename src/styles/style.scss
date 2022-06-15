@@ -3,15 +3,19 @@
 @import "./base/typography.scss";
 
 // classes
-@import './classes/containers.scss';
+@import "./classes/containers.scss";
 
 // components
-@import './components/buttons.scss';
-@import './components/input.scss';
+@import "./components/buttons.scss";
+@import "./components/completeSignUp.scss";
+@import "./components/input.scss";
 
 // layout
+@import "./layout/forms.scss";
 @import "./layout/icons.scss";
 @import "./layout/navbar.scss";
 
 // pages
-@import './pages/welcome.scss';
+@import "./pages/recover.scss";
+@import "./pages/register.scss";
+@import "./pages/welcome.scss";

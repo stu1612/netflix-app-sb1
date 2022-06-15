@@ -14,8 +14,8 @@ export default function Welcome() {
   const [email, setEmail] = useState("");
 
   return (
-    <section id="welcome" className="welcome landing-wrapper">
-      <div className="welcome-text">
+    <section id="welcome" className="landing-wrapper">
+      <div className="introduction">
         <h1>Unlimited movies, series and more.</h1>
         <h2>Look where you want. Exit whenver you want.</h2>
         <p>
@@ -23,10 +23,10 @@ export default function Welcome() {
           account.
         </p>
         <div className="form-container">
-          <form>
+          <form className="form">
             <Input
-              classname="input-signup"
-              inputStyle={null}
+              divClass="input-signup"
+              inputClass={null}
               setup={form.email}
               state={[email, setEmail]}
               validation={validateEmail}

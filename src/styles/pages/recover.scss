@@ -1,0 +1,51 @@
+#recover {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  background-image: url("../../assets/images/the-crown.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  .container {
+    position: absolute;
+    inset: 0;
+    width: min(100%, 560px);
+    height: 100%;
+    background-color: #f3f3f3;
+
+    .content {
+      padding: 6rem 1rem;
+
+      h2 {
+        color: $color-black;
+        text-align: left;
+        margin-bottom: 2rem;
+      }
+
+      p {
+        text-align: left;
+      }
+
+      form {
+        margin: 2rem 0;
+      }
+    }
+  }
+}
+
+@media (min-width: $media-tablet-sm) {
+  #recover {
+    .container {
+      height: auto;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      .content {
+        padding: 4rem;
+      }
+    }
+  }
+}

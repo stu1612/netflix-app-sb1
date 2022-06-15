@@ -37,7 +37,7 @@ export default function LoginForm({ onLogin, emailState, passState }) {
           <span>Remember me</span>
         </div>
         <span>
-          <Link to="/LoginHelp" className="help">
+          <Link to="/login-help" className="help">
             Need help?
           </Link>
         </span>
