@@ -22,10 +22,8 @@
     left: 50%;
     width: min(95%, 860px);
 
-    p {
-      & :first-child {
-        padding: 1rem 0;
-      }
+    p:first-of-type {
+      padding: 1rem 0;
     }
 
     .form-container {

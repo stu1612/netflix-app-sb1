@@ -1,11 +1,5 @@
 @import "./fonts";
 
-button {
-  font-family: "NetflixRegular";
-  line-height: 0;
-  cursor: pointer;
-}
-
 h1 {
   font-family: NetflixBold, Arial, Helvetica, sans-serif;
   color: #fff;
@@ -29,14 +23,15 @@ h2 {
 p {
   font-family: NetflixLight, Arial, Helvetica, sans-serif;
   color: #fff;
-  font-size: 1.6rem;
-  line-height: 1.1;
+  font-size: 1.7rem;
+  line-height: 1.5;
   text-align: center;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
   font-weight: 500;
 }
 
 input,
+button,
 span {
   font-family: NetflixRegular, Arial, Helvetica, sans-serif;
 }

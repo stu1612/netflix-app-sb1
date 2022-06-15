@@ -30,7 +30,7 @@ export default function LoginForm({ onLogin, emailState, passState }) {
         divClass="input-login"
         inputClass="dark-background"
       />
-      <button className="btn-signup">Sign In</button>
+      <button className="btn-signin">Sign In</button>
       <div className="remember-check">
         <div className="checkbox">
           <input type="checkbox" checked={checked} onChange={toggleChecked} />

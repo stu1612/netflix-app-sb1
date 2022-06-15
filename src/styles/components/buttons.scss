@@ -1,55 +1,56 @@
-button {
-  cursor: pointer;
-  border: 0;
-  line-height: normal;
-  font-family: "NetflixRegular";
-}
-
-.cta-red {
-  background-color: $color-red;
-  padding: 0.7rem 1.7rem;
-  font-weight: 400;
-  font-size: 1.4rem;
-  border-radius: 4px;
+.btn {
   color: $color-white;
-  font-weight: 200;
-  letter-spacing: 0.7px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
   text-transform: capitalize;
 }
 
-.button-signup {
+.btn-red {
   background-color: $color-red;
+  &:hover {
+    background-color: darken($color-red, 10%);
+  }
+}
+
+.btn-blue {
+  background-color: $color-blue;
+  &:hover {
+    background-color: darken($color-red, 10%);
+  }
+}
+
+.btn-reg {
+  background-color: $color-red;
+  padding: 0.7rem 1.7rem;
+  font-size: 1.4rem;
+  border-radius: 4px;
+  letter-spacing: 0.7px;
+}
+
+.btn-signup {
   width: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: $color-white;
   height: 6.5rem;
   font-size: 1.8rem;
 }
 
 .btn-primary {
   min-height: 6rem;
-  font-weight: 500;
   font-size: 1.9rem;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
   border-radius: 4px;
-  background-color: $color-red;
   width: min(100%, 330px);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: $color-white;
 }
 
-.btn-signup {
-  background-color: $color-red;
+.btn-signin {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: $color-white;
   padding: 2rem;
   margin-top: 3rem;
   height: 100%;
@@ -57,22 +58,18 @@ button {
 }
 
 .btn-recover {
-  min-height: 64px;
+  min-height: 6.4rem;
   font-weight: 500;
-  font-size: 19px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
+  font-size: 1.9rem;
   border-radius: 4px;
-  background-color: $color-blue;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: $color-white;
 }
 
 @media (min-width: $media-tablet-lg) {
-  .button-signup {
+  .btn-signup {
     height: 100%;
     flex: 1;
   }

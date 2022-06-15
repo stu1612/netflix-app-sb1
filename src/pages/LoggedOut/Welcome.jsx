@@ -32,7 +32,9 @@ export default function Welcome() {
               validation={validateEmail}
             />
             <Link
-              className={`button-signup ${email ? "active" : "disabled"}`}
+              className={`btn btn-red btn-signup ${
+                email ? "active" : "disabled"
+              }`}
               state={{ data: email }}
               to="/signup/registration"
             >

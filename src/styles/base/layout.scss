@@ -39,10 +39,7 @@ button,
 input[type="submit"] {
   outline: none;
   border: none;
-}
-
-button:hover,
-input[type="submit"] {
+  line-height: normal;
   cursor: pointer;
 }
 

@@ -26,7 +26,7 @@ export default function Nav() {
           </div>
         </div>
         <div className="right">
-          <button className="cta-red" onClick={onLogin}>
+          <button className="btn btn-red btn-reg" onClick={onLogin}>
             Sign in
           </button>
         </div>
