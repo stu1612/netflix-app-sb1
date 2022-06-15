@@ -1,6 +1,23 @@
-// sign up form
+// sign up
 .email-preference {
   span {
     margin-left: 0.5rem;
   }
+}
+
+// sign in
+.checkbox input[type="checkbox"] {
+  margin-right: 0.3rem;
+}
+
+.remember-check {
+  display: flex;
+  justify-content: space-between;
+  color: var(--grey);
+  padding: 0.5rem 0;
+  font-size: 13px;
+}
+
+.help {
+  color: $color-grey;
 }

@@ -40,7 +40,7 @@ export default function RecoverPassword() {
   }
 
   return (
-    <section id="recover">
+    <section id="recover" className="landing-wrapper">
       <div className="container">
         <div className="content">
           <h2>Forgot Email/Password</h2>
@@ -54,7 +54,6 @@ export default function RecoverPassword() {
               state={[email, setEmail]}
               classname="input-padding"
             />
-
             <button className="btn-recover">Email Me</button>
           </form>
         </div>

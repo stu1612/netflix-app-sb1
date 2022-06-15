@@ -6,11 +6,11 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 import { loginUser } from "../../firebase/fireAuth";
 import { ModalContext } from "../../contexts/ModalContext";
-import CompleteLogin from "../../components/CompleteLogin";
-import firebaseErrors from "../../data/firebaseError.json";
+import CompleteSignIn from "../../components/CompleteSignIn";
 import ErrorMessage from "../../components/ErrorMessage";
+import firebaseErrors from "../../data/firebaseError.json";
 
-export default function Login() {
+export default function SignIn() {
   // global state
   const { setUID, admin } = useContext(AuthContext);
   const { setIsModal } = useContext(ModalContext);
@@ -42,7 +42,7 @@ export default function Login() {
   }
 
   return (
-    <CompleteLogin
+    <CompleteSignIn
       emailState={[email, setEmail]}
       passState={[password, setPassword]}
       onLogin={onLogin}

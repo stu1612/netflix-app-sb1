@@ -20,15 +20,15 @@ export default function LoginForm({ onLogin, emailState, passState }) {
       <Input
         setup={form.email}
         state={[email, setEmail]}
-        classname="input-login"
-        inputStyle="dark-bg"
+        divClass="input-login"
+        inputClass="dark-background"
       />
       <Input
         setup={form.password}
         state={[password, setPassword]}
         validation={validateString}
-        classname="input-login"
-        inputStyle="dark-bg"
+        divClass="input-login"
+        inputClass="dark-background"
       />
       <button className="btn-signup">Sign In</button>
       <div className="remember-check">

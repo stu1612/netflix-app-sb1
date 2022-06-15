@@ -3,12 +3,12 @@ import { Routes, Route } from "react-router-dom";
 import LoggedOutNavbar from "../components/navigation/LoggedOutNavbar";
 
 // files
-import Welcome from "../pages/LoggedOut/Welcome";
-import Login from "../pages/LoggedOut/Login";
+import Error404 from "../pages/Error404";
 import RecoverPassword from "../pages/LoggedOut/RecoverPassword";
 import Registration from "../pages/LoggedOut/Registration";
+import SignIn from "../pages/LoggedOut/SignIn";
 import SignUp from "../pages/LoggedOut/SignUp";
-import Error404 from "../pages/Error404";
+import Welcome from "../pages/LoggedOut/Welcome";
 
 export default function LoggedOutRoutes() {
   return (
@@ -18,7 +18,7 @@ export default function LoggedOutRoutes() {
         <Route path="/" element={<Welcome />} />
         <Route path="signup/registration" element={<Registration />} />
         <Route path="signup/regform" element={<SignUp />} />
-        <Route path="login" element={<Login />} />
+        <Route path="login" element={<SignIn />} />
         <Route path="login-help" element={<RecoverPassword />} />
         <Route path="*" element={<Error404 />} />
       </Routes>

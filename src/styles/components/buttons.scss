@@ -63,17 +63,21 @@ button {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  background-color: #2490fd;
+  background-color: $color-blue;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--white);
+  color: $color-white;
 }
 
 @media (min-width: $media-tablet-lg) {
   .button-signup {
     height: 100%;
     flex: 1;
+  }
+
+  .btn-recover {
+    margin-top: 4rem;
   }
 }

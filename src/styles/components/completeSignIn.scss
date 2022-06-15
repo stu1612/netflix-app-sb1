@@ -1,0 +1,66 @@
+#login {
+  background-image: url("../../assets/images/sign_up_wallpaper.jpeg"),
+    linear-gradient(
+      0deg,
+      rgba(2, 0, 36, 1) 5%,
+      rgba(2, 0, 36, 0.7) 52%,
+      rgba(2, 0, 36, 0.5) 88%
+    );
+
+  background-blend-mode: color;
+
+  .container {
+    position: absolute;
+    inset: 0;
+    background-color: $color-black;
+    color: $color-white;
+    height: auto;
+    padding: 6rem 2rem;
+
+    h1 {
+      font-size: 1.8rem;
+      text-transform: capitalize;
+      text-align: left;
+      font-family: "NetflixBold";
+      margin-bottom: 2rem;
+    }
+
+    .signup {
+      margin-top: 4rem;
+
+      h3 {
+        color: #737373;
+        font-size: 15px;
+        margin-bottom: 1rem;
+      }
+
+      .register {
+        color: var(--white);
+      }
+
+      p {
+        text-align: left;
+        color: #737373;
+        font-size: 13px;
+      }
+
+      .learn {
+        color: #5239e1;
+      }
+    }
+  }
+}
+
+@media (min-width: $media-tablet-md) {
+  #login {
+    .container {
+      background-color: rgba(0, 0, 0, 0.75);
+      border-radius: 5px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 460px;
+      padding: 4rem;
+    }
+  }
+}
