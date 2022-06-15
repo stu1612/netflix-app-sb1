@@ -14,10 +14,10 @@ export default function Welcome() {
   const [email, setEmail] = useState("");
 
   return (
-    <section id="welcome" className="landing-wrapper">
+    <section id="welcome">
       <div className="introduction">
         <h1>Unlimited movies, series and more.</h1>
-        <h2>Look where you want. Exit whenver you want.</h2>
+        <p>Look where you want. Exit whenver you want.</p>
         <p>
           Ready to watch? Enter your email address to create or reactivate an
           account.

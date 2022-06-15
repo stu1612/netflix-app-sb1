@@ -12,7 +12,7 @@ import Welcome from "../pages/LoggedOut/Welcome";
 
 export default function LoggedOutRoutes() {
   return (
-    <div>
+    <div className="holder">
       <LoggedOutNavbar />
       <Routes>
         <Route path="/" element={<Welcome />} />

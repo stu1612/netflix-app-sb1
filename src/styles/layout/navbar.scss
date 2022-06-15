@@ -85,17 +85,19 @@
 }
 
 @media (min-width: $media-tablet-lg) {
-  .navbar--container {
-    padding: 1.5rem 3.5rem;
+  .navbar {
+    .navbar--container {
+      padding: 1.5rem 3.5rem;
 
-    .left img {
-      height: 5.75rem;
-    }
+      .left img {
+        height: 5.75rem;
+      }
 
-    .right img {
-      height: 5rem;
-      width: 5rem;
-      padding-left: 2rem;
+      .right img {
+        height: 5rem;
+        width: 5rem;
+        padding-left: 2rem;
+      }
     }
   }
 }
