@@ -64,8 +64,6 @@
   color: $color-white !important;
 }
 
-// media queries
-
 @media (min-width: $media-tablet-md) {
   #input {
     input {
@@ -80,8 +78,10 @@
     padding: 0.5rem 0;
 
     input {
-      :focus ~ span,
-      :valid ~ span {
+      :focus ~ span {
+        transform: translateX(-13px) translateY(-20px);
+      }
+      &:valid ~ span {
         transform: translateX(-13px) translateY(-20px);
       }
     }

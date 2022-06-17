@@ -15,8 +15,12 @@
 .btn-blue {
   background-color: $color-blue;
   &:hover {
-    background-color: darken($color-red, 10%);
+    background-color: darken($color-blue, 10%);
   }
+}
+
+.disabled {
+  pointer-events: none;
 }
 
 .btn-reg {

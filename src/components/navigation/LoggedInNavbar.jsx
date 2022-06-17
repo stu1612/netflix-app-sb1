@@ -29,11 +29,11 @@ export default function Navbar() {
   return (
     <nav className={isScrolled ? "navbar active" : "navbar"}>
       <div className="navbar--container">
-        <div className="navbar--container__left">
+        <div className="left">
           <img src={logo} alt="netflix logo" onClick={() => navigate("/")} />
           <div className="desktop-navigation">{navItems}</div>
         </div>
-        <div className="navbar--container__right">
+        <div className="right">
           <FontAwesomeIcon icon={faMagnifyingGlass} className="nav-icon" />
           <FontAwesomeIcon icon={faBell} className="nav-icon" />
           <div className="dropdown">

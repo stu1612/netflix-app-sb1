@@ -1,0 +1,47 @@
+#signup {
+  background-color: $color-white;
+  min-height: 100vh;
+  height: 100%;
+  // margin-bottom: 5rem;
+  // position: absolute;
+  inset: 0;
+  // overflow: hidden;
+
+  .container {
+    width: min(90%, 480px);
+    margin: 0 auto;
+    padding: 8rem 1rem;
+    color: $color-black;
+
+    .content {
+      .indicators {
+        font-size: 1.3rem;
+        line-height: 1.7;
+        text-transform: uppercase;
+        font-family: NetflixRegular, Arial, Helvetica, sans-serif;
+        font-weight: 500;
+        color: $color-grey;
+        margin-bottom: 1rem;
+      }
+
+      .bold {
+        font-weight: 800;
+        color: $color-shade;
+      }
+      h1 {
+        text-align: left;
+        font-size: 2.25rem;
+        color: $color-black;
+      }
+
+      .body {
+        padding: 2rem 0;
+
+        p {
+          text-align: left;
+          color: $color-black;
+        }
+      }
+    }
+  }
+}

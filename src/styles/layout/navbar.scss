@@ -71,6 +71,19 @@
   }
 }
 
+.black-bg {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.35) 35%,
+    rgba(0, 0, 0, 0.15) 65%,
+    transparent 100%
+  );
+}
+
+.white-bg {
+  background-color: white;
+  border-bottom: 1px solid black;
+}
+
 @media (min-width: $media-tablet-md) {
   .left img {
     height: 4.75rem;

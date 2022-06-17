@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 // files
 import logo from "../../assets/images/netflix-logo-png-2562.png";
 
-export default function Nav() {
+export default function LoggedOutNavbar({ navBg }) {
   // properties
   const navigate = useNavigate();
 
@@ -18,7 +18,7 @@ export default function Nav() {
   }
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${navBg}`}>
       <div className="navbar--container">
         <div className="left">
           <div className="navbar-logo">

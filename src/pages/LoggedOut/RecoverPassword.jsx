@@ -9,6 +9,7 @@ import ErrorMessage from "../../components/ErrorMessage";
 import firebaseErrors from "../../data/firebaseError.json";
 import form from "../../data/recoverPassword.json";
 import Input from "../../components/Input";
+import LoggedOutNavbar from "../../components/navigation/LoggedOutNavbar";
 
 export default function RecoverPassword() {
   // globalstate
@@ -40,24 +41,27 @@ export default function RecoverPassword() {
   }
 
   return (
-    <section id="recover" className="landing-wrapper">
-      <div className="container">
-        <div className="content">
-          <h2>Forgot Email/Password</h2>
-          <p>
-            We'll send you an email with instructions on how to reset your
-            password.
-          </p>
-          <form onSubmit={onRecover}>
-            <Input
-              setup={form.email}
-              state={[email, setEmail]}
-              classname="input-padding"
-            />
-            <button className="btn-recover">Email Me</button>
-          </form>
+    <>
+      <LoggedOutNavbar />
+      <section id="recover" className="landing-wrapper">
+        <div className="container">
+          <div className="content">
+            <h2>Forgot Email/Password</h2>
+            <p>
+              We'll send you an email with instructions on how to reset your
+              password.
+            </p>
+            <form onSubmit={onRecover}>
+              <Input
+                setup={form.email}
+                state={[email, setEmail]}
+                classname="input-padding"
+              />
+              <button className="btn btn-blue btn-recover">Email Me</button>
+            </form>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

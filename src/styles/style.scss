@@ -4,12 +4,15 @@
 
 // classes
 @import "./classes/containers.scss";
+@import "./classes/slick.scss";
 
 // components
 @import "./components/buttons.scss";
-@import "./components/completeSignIn.scss";
-@import "./components/completeSignUp.scss";
+@import "./components/signIn.scss";
+@import "./components/signUp.scss";
 @import "./components/input.scss";
+@import "./components/jumbotron.scss";
+@import "./components/media.scss";
 
 // layout
 @import "./layout/forms.scss";

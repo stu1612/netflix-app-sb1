@@ -42,7 +42,7 @@ export default function SignUpForm({ passState, emailState, onSignUp }) {
         <input type="checkbox" />
         <span>Do not send me email with special offers from Netflix.</span>
       </div>
-      <button className="btn-signup">Next</button>
+      <button className="btn btn-red btn-signin">Next</button>
     </form>
   );
 }

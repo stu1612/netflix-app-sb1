@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
 // files
-import { ModalContext } from "../contexts/ModalContext";
-import MediaButtons from "./MediaButtons";
-import img from "../assets/images/jumbotron-bg.jpeg";
+import { ModalContext } from "../../contexts/ModalContext";
+import MediaButtons from "../MediaButtons";
+import img from "../../assets/images/jumbotron-bg.jpeg";
 
 export default function MediaItem({ item, data }) {
   // global state
@@ -17,7 +17,7 @@ export default function MediaItem({ item, data }) {
     data.jumbotronItem;
 
   return (
-    <div className="media-item">
+    <div className="carousel">
       <FontAwesomeIcon
         icon={faCircleXmark}
         className="close-icon"

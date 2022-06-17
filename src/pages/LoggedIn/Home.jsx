@@ -2,8 +2,7 @@ import { useState } from "react";
 
 // files
 import Jumbotron from "../../components/Jumbotron";
-import Carousel from "../../components/Carousel";
-import MediaSlider from "../../components/MediaSlider";
+import Carousel from "../../components/carousel/Carousel";
 import useLoad from "../../hooks/useLoad";
 
 export default function Home() {
@@ -23,7 +22,7 @@ export default function Home() {
     <div className="home">
       <Jumbotron />
       <div className="medias">
-        <MediaSlider />
+        <Carousel />
       </div>
       {/* <Carousel movies={movies} /> */}
     </div>
