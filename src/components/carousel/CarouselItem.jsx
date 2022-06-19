@@ -8,6 +8,7 @@ import MediaItem from "../media/MediaItem";
 export default function CarouselItem({ item }) {
   // global state
   const { setIsModal } = useContext(ModalContext);
+
   return (
     <div
       key={item.id}

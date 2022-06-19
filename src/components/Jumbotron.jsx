@@ -7,7 +7,7 @@ import { faPlay, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { ModalContext } from "../contexts/ModalContext";
 import data from "../data/jumbotron.json";
-import CarouselItem from "./carousel/CarouselItem";
+import MediaItem from "../components/media/MediaItem";
 
 export default function Jumbotron() {
   // global state
@@ -27,7 +27,7 @@ export default function Jumbotron() {
         <p>{jumbotronItem.text}</p>
         <div className="buttons">
           <Link
-            className="hero-btn hero-play"
+            className="btn btn-hero play"
             to={"/watch"}
             state={{ data: movieItem }}
           >
@@ -35,8 +35,8 @@ export default function Jumbotron() {
             <span>Play</span>
           </Link>
           <button
-            className="hero-btn info"
-            onClick={() => setIsModal(<CarouselItem data={data} />)}
+            className="btn btn-hero info"
+            onClick={() => setIsModal(<MediaItem data={data} />)}
           >
             <FontAwesomeIcon icon={faCircleInfo} />
             <span>More Info</span>

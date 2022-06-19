@@ -1,0 +1,25 @@
+#icons {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: -5%;
+  left: 5%;
+  z-index: 30;
+
+  .play {
+    padding: 0.6rem 2.2rem;
+    border-radius: 4px;
+
+    span {
+      padding-left: 0.6rem;
+    }
+  }
+
+  .icon {
+    margin-left: 1rem;
+    background-color: $color-light-grey;
+    border: 1px solid $color-light-grey;
+    border-radius: 100px;
+    height: 2rem;
+  }
+}

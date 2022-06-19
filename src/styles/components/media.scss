@@ -1,14 +1,24 @@
-.carousel {
+#media {
   display: flex;
   flex-direction: column;
   position: relative;
   border-radius: 5px;
   height: 100%;
   width: 90%;
+  background-color: rgb(24, 24, 24);
 
-  .img-wrapper {
+  .top {
     width: 100%;
     position: relative;
+
+    img {
+      height: auto;
+      width: 100%;
+      object-fit: cover;
+      aspect-ratio: 16 / 9;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
 
     .bg-overlay {
       position: absolute;
@@ -18,146 +28,112 @@
       width: 100%;
       background: linear-gradient(
         transparent,
-        rgba(24, 24, 24, 0.3) 30%,
-        rgba(24, 24, 24, 0.7) 70%,
+        rgba(24, 24, 24, 0.1) 30%,
+        rgba(24, 24, 24, 0.5) 60%,
+        rgba(24, 24, 24, 0.8) 80%,
         rgba(24, 24, 24, 1) 100%
       );
     }
   }
-}
 
-.img-wrapper img {
-  height: auto;
-  width: 100%;
-  object-fit: cover;
-  aspect-ratio: 16 / 9;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
+  .bottom {
+    padding: 1rem;
+    margin-top: 2rem;
 
-.media-item__shape {
-  padding: 1rem;
-  margin-top: 2rem;
-}
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
-.media-buttons {
-  position: absolute;
-  bottom: -5%;
-  left: 5%;
-  z-index: 30;
-}
+      .bio {
+        font-size: 1.2rem;
+        flex: 2;
 
-.play {
-  padding: 0.6rem 2.2rem;
-  border-radius: 4px;
-}
+        .information {
+          span {
+            margin-right: 1rem;
 
-.play span {
-  padding-left: 0.6rem;
-}
+            &.age {
+              border: 1px solid $color-white;
+              padding: 0 0.6rem;
+            }
+          }
+        }
 
-.media-icon {
-  padding: 0.6rem;
-  margin-left: 0.5rem;
-  background-color: rgb(24, 24, 24);
-  border: 1px solid var(--light-grey);
-  border-radius: 100px;
-}
+        .description {
+          margin-top: 1.5rem;
 
-.media-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+          p {
+            font-size: 1.3rem;
+            text-align: justify;
+          }
+        }
+      }
 
-.media-content__bio {
-  font-size: 1.2rem;
-  flex: 2;
-}
+      .details {
+        flex: 1;
 
-.media-content__information {
-  text-align: center;
-}
+        .detail {
+          font-size: 1.2rem;
+          margin: 2rem 0;
 
-.media-content__information span {
-  padding: 0 0.6rem;
-}
-
-.age {
-  border: 1px solid white;
-  padding: 0 0.6rem;
-}
-
-.seasons {
-  font-weight: bolder;
-}
-
-.media-content__description {
-  margin-top: 1.5rem;
-}
-
-.media-content__description p {
-  font-size: 1.3rem;
-  text-align: justify;
-}
-
-.media-content__details {
-  flex: 1;
-}
-
-.detail {
-  font-size: 1.2rem;
-  margin: 2rem 0;
-}
-
-.detail span:nth-child(1) {
-  color: var(--grey);
-  padding-right: 0.5rem;
-}
-
-.close-icon {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 2.5rem;
-  z-index: 30;
-  border-radius: 100px;
-  color: rgb(24, 24, 24);
-  background-color: var(--light-grey);
-  cursor: pointer;
-}
-
-@media (min-width: 760px) {
-  .media-item {
-    width: min-content;
+          span:nth-child(1) {
+            color: $color-grey;
+            padding-right: 0.5rem;
+          }
+        }
+      }
+    }
   }
-  .img-wrapper img {
-    width: auto;
-    object-fit: contain;
-  }
+}
 
-  .media-item__shape {
-    padding: 4rem 2rem;
-  }
+// .seasons {
+//   font-weight: bolder;
+// }
 
-  .media-content {
-    flex-direction: row;
-  }
+@media (min-width: $media-tablet-md) {
+  #media {
+    width: 80%;
 
-  .media-content__bio {
-    padding-right: 3rem;
-  }
+    .top {
+      img {
+        // width: auto;
+        object-fit: contain;
+      }
+    }
 
-  .media-content__information {
-    text-align: justify;
-    margin-left: 0.5rem;
-  }
+    .bottom {
+      padding: 4rem 2rem;
 
-  .detail {
-    margin: 0;
-  }
+      .content {
+        flex-direction: row;
 
-  .detail:nth-child(1) {
-    margin-bottom: 1.5rem;
+        .bio {
+          padding-right: 3rem;
+
+          .information {
+            text-align: justify;
+            margin-left: 0.5rem;
+          }
+        }
+
+        .details {
+          .detail {
+            margin: 0;
+
+            &:nth-child(1) {
+              margin-bottom: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $media-tablet-lg) {
+  #media {
+    width: min(60%, 60rem);
+    height: 80vh;
   }
 }
