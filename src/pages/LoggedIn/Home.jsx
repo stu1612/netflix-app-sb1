@@ -14,17 +14,23 @@ export default function Home() {
   // methods
   useLoad(path, setMovies);
 
-  // const filteredArr = movies.filter(
-  //   (item) => item.search === "Blockbuster Movies"
-  // );
+  function returnSearchedMovies(category) {
+    const filteredItems = movies.filter((item) => item.search === category);
+    return filteredItems;
+  }
+
+  const blockbusters = returnSearchedMovies("blockbuster");
+  const popularComedies = returnSearchedMovies("popular-comedies");
+  const oscars = returnSearchedMovies("oscar-movie");
 
   return (
     <div className="home">
       <Jumbotron />
       <div className="medias">
-        <Carousel movies={movies} />
+        <Carousel movies={blockbusters} title="Blockbuster Movies" />
+        <Carousel movies={popularComedies} title="Popular Comedies" />
+        <Carousel movies={oscars} title="Oscar Award Winning Movies" />
       </div>
-      {/* <Carousel movies={movies} /> */}
     </div>
   );
 }

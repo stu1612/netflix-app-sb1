@@ -5,7 +5,6 @@ import Slider from "react-slick";
 // files
 import breakpoints from "../../data/sliderBreakpointSettings.json";
 import CarouselItem from "./CarouselItem";
-import data from "../../data/images.json";
 
 // methods
 function PrevArrow({ onClick }) {
@@ -30,7 +29,7 @@ function NextArrow({ onClick }) {
   );
 }
 
-export default function Carousel({ movies }) {
+export default function Carousel({ movies, title }) {
   // properties
   let settings = {
     dots: false,
@@ -51,7 +50,7 @@ export default function Carousel({ movies }) {
 
   return (
     <div className="slider-container">
-      <h2 className="slider-title">Blockbuster movies</h2>
+      <h2 className="slider-title">{title}</h2>
       <Slider {...settings}>{mappedItems}</Slider>
     </div>
   );

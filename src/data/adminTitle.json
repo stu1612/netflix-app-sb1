@@ -6,6 +6,7 @@
     "required": true,
     "type": "text"
   },
+
   "text": {
     "autoFocus": false,
     "label": "Description",
