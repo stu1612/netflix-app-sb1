@@ -21,3 +21,49 @@
 .help {
   color: $color-grey;
 }
+
+// admin
+
+.form-admin {
+  padding: 1rem;
+  background-color: $color-grey;
+  color: $color-black;
+  overflow: scroll;
+  margin-top: 12rem;
+  margin-bottom: 5rem;
+  width: min(80%, 300px);
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2rem 0;
+
+    button {
+      padding: 2rem;
+    }
+  }
+}
+
+.form-admin label {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+}
+
+.form-admin input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  border: 0;
+}
+
+@media (min-width: $media-tablet-md) {
+  .form-admin {
+    overflow: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: auto;
+  }
+}

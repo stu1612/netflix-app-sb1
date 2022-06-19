@@ -1,20 +1,23 @@
 // files
 import MediaIcons from "../MediaIcons";
-import img from "../../assets/images/jumbotron-bg.jpeg";
 import CloseModal from "../CloseModal";
 
-export default function MediaItem({ item, data }) {
+export default function MediaItem({ item }) {
   // properties
-  const { year, age, time, text, cast, genre, modalImg, title } =
-    data.jumbotronItem;
+  const { year, age, time, text, cast, genre, modalImg, image, title } = item;
 
   return (
     <section id="media">
       <CloseModal />
       <div className="top">
-        <img src={require(`../../assets/images/${modalImg}`)} alt={title} />
-        {/* <img src={img} alt={title} /> */}
-        <MediaIcons />
+        {image ? (
+          <img src={image} alt={title} />
+        ) : (
+          <img src={require(`../../assets/images/${modalImg}`)} alt={title} />
+        )}
+
+        <MediaIcons item={item} />
+
         <div className="bg-overlay"></div>
       </div>
       <div className="bottom">

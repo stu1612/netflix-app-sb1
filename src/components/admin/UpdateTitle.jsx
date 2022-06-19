@@ -2,6 +2,7 @@
 import { useContext, useState } from "react";
 // Project files
 import InputField from "../InputField";
+import Input from "../Input";
 import InputFile from "../InputFile";
 import form from "../../data/adminTitle.json";
 import { updateDocument } from "../../firebase/fireStore";
@@ -13,12 +14,13 @@ import { createFile } from "../../firebase/cloudStorage";
 export default function UpdateTitle({ item, path }) {
   // Global state
   const { categoryType, setCategoryType } = useContext(AppContext);
-  const { isModal, setIsModal } = useContext(ModalContext);
+  const { setIsModal } = useContext(ModalContext);
 
   // local state
   const [title, setTitle] = useState(item.title);
   const [text, setText] = useState(item.text);
-  const [search, setSearch] = useState(item.search);
+  const [time, setTime] = useState(item.time);
+  // const [search, setSearch] = useState(item.search);
   const [genre, setGenre] = useState(item.genre);
   const [age, setAge] = useState(item.age);
   const [cast, setCast] = useState(item.cast);
@@ -33,7 +35,8 @@ export default function UpdateTitle({ item, path }) {
     id: item.id,
     title: title,
     text: text,
-    search: search,
+    time: time,
+    // search: search,
     genre: genre,
     age: age,
     cast: cast,
@@ -89,17 +92,19 @@ export default function UpdateTitle({ item, path }) {
       <h2>Update your changes</h2>
       <InputField setup={form.title} state={[title, setTitle]} />
       <InputField setup={form.text} state={[text, setText]} />
-      <InputField setup={form.search} state={[search, setSearch]} />
+      <InputField setup={form.time} state={[time, setTime]} />
       <InputField setup={form.genres} state={[genre, setGenre]} />
       <InputField setup={form.age} state={[age, setAge]} />
       <InputField setup={form.cast} state={[cast, setCast]} />
       <InputField setup={form.year} state={[year, setYear]} />
       <InputFile imageSelect={onThumbnail} label="Thumbnail" />
       <InputFile imageSelect={onImage} label="Background image" />
-      <button className="btn-admin">Confirm</button>
-      <button onClick={() => setIsModal(null)} className="btn-admin">
-        Cancel
-      </button>
+      <div className="buttons">
+        <button className="btn-admin">Confirm</button>
+        <button onClick={() => setIsModal(null)} className="btn-admin">
+          Cancel
+        </button>
+      </div>
     </form>
   );
 }

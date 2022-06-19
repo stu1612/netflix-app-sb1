@@ -14,17 +14,14 @@ export default function Jumbotron() {
   const { setIsModal } = useContext(ModalContext);
 
   // properties
-  const { jumbotronItem } = data;
-  const [movieItem] = useState(jumbotronItem);
+  const { logo, title, text } = data;
+  const [movieItem] = useState(data);
 
   return (
     <section id="jumbotron">
       <div className="bio">
-        <img
-          src={require(`../assets/images/${jumbotronItem.logo}`)}
-          alt={jumbotronItem.title}
-        />
-        <p>{jumbotronItem.text}</p>
+        <img src={require(`../assets/images/${logo}`)} alt={title} />
+        <p>{text}</p>
         <div className="buttons">
           <Link
             className="btn btn-hero play"
@@ -36,7 +33,7 @@ export default function Jumbotron() {
           </Link>
           <button
             className="btn btn-hero info"
-            onClick={() => setIsModal(<MediaItem data={data} />)}
+            onClick={() => setIsModal(<MediaItem item={data} />)}
           >
             <FontAwesomeIcon icon={faCircleInfo} />
             <span>More Info</span>

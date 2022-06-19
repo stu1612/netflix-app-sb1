@@ -30,7 +30,7 @@ function NextArrow({ onClick }) {
   );
 }
 
-export default function Carousel() {
+export default function Carousel({ movies }) {
   // properties
   let settings = {
     dots: false,
@@ -45,7 +45,7 @@ export default function Carousel() {
   };
 
   // components
-  const mappedItems = data.map((item) => (
+  const mappedItems = movies.map((item) => (
     <CarouselItem key={item.id} item={item} />
   ));
 

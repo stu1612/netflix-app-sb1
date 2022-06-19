@@ -7,12 +7,12 @@ import useLoad from "../../hooks/useLoad";
 
 export default function Home() {
   // local state
-  // const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState([]);
 
   // properties
-  // const path = "media/categories/content/movies/content";
+  const path = "media/categories/content/movies/content";
   // methods
-  // useLoad(path, setMovies);
+  useLoad(path, setMovies);
 
   // const filteredArr = movies.filter(
   //   (item) => item.search === "Blockbuster Movies"
@@ -22,7 +22,7 @@ export default function Home() {
     <div className="home">
       <Jumbotron />
       <div className="medias">
-        <Carousel />
+        <Carousel movies={movies} />
       </div>
       {/* <Carousel movies={movies} /> */}
     </div>

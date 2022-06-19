@@ -13,9 +13,9 @@ export default function CarouselItem({ item }) {
     <div
       key={item.id}
       className="slider"
-      onClick={() => setIsModal(<MediaItem />)}
+      onClick={() => setIsModal(<MediaItem item={item} />)}
     >
-      <img src={require(`../../assets/images/${item.img}`)} alt="fdfd" />
+      <img src={item.thumbnail} alt={item.title} />
     </div>
   );
 }

@@ -17,13 +17,14 @@
 @import "./components/signUp.scss";
 @import "./components/video.scss";
 
-
 // layout
 @import "./layout/forms.scss";
 @import "./layout/icons.scss";
 @import "./layout/navbar.scss";
 
 // pages
+@import "./pages/admin.scss";
+@import "./pages/adminCategories.scss";
 @import "./pages/recover.scss";
 @import "./pages/register.scss";
 @import "./pages/welcome.scss";

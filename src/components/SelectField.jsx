@@ -14,6 +14,7 @@ export default function SelectField() {
   return (
     <select id="category" value={selectValue} onChange={handleChange}>
       <option value="blockbuster">Blockbuster Movies</option>
+      <option value="home-page">Home Page</option>
       <option value="popular-comedies">Popular Comedies</option>
       <option value="action-comedies">Action comedies</option>
       <option value="oscar-movie">Oscar Winning Movies</option>

@@ -28,7 +28,7 @@ export default function Admin() {
   // components
   const mappedItems = categories.map((item) => (
     <Link to={`/admin/${item.id}`} key={item.id} className="admin-link">
-      {item.title}
+      <h2>{item.title}</h2>
     </Link>
   ));
 
@@ -37,11 +37,11 @@ export default function Admin() {
   if (error) return "Error ...";
 
   return (
-    <div className="container-960 justify-center">
+    <section id="admin">
       <div className="admin-grid">{mappedItems}</div>
-      <button className="btn-admin" onClick={logout}>
+      <button className="btn btn-red btn-admin" onClick={logout}>
         Logout
       </button>
-    </div>
+    </section>
   );
 }

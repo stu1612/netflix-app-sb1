@@ -39,9 +39,9 @@ export default function AdminCategory() {
   if (error) return "Error ...";
 
   return (
-    <div className="container-1200">
+    <section id="admin-category">
       <h1>Welcome to your {id} admin section</h1>
-      <div className="cards-row-container">
+      <div className="container">
         <div className="cards">
           <div className="card-wrapper">
             <FontAwesomeIcon
@@ -53,9 +53,9 @@ export default function AdminCategory() {
           {mappedItems}
         </div>
       </div>
-      <button className="btn-back" onClick={() => navigate(-1)}>
+      <button className="btn-admin" onClick={() => navigate(-1)}>
         go back
       </button>
-    </div>
+    </section>
   );
 }
