@@ -13,7 +13,7 @@ import SelectField from "../SelectField";
 export default function CreateTitle({ id }) {
   // global state
   const { setThumbnail, setImage } = useContext(FileContext);
-  const { selectValue, setSelectValue } = useContext(AppContext);
+  const { selectValue } = useContext(AppContext);
 
   // local state
   const [title, setTitle] = useState("");
