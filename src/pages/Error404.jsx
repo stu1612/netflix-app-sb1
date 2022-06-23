@@ -9,7 +9,7 @@ export default function Error404() {
     <div className="error-page">
       <div className="content">
         <h1>Oops, this page does not exist</h1>
-        <button onClick={() => navigate("/")} className="cta-red">
+        <button onClick={() => navigate("/")} className="btn btn-red btn-reg">
           Let's go home
         </button>
       </div>

@@ -6,6 +6,7 @@ import Admin from "../pages/LoggedIn/Admin";
 import AdminCategory from "../pages/LoggedIn/AdminCategory";
 import AdminCategoryItem from "../pages/LoggedIn/AdminCategoryItem";
 import AdminCategorySubItem from "../pages/LoggedIn/AdminCategorySubItem";
+import Error404 from "../pages/Error404";
 import Home from "../pages/LoggedIn/Home";
 import LoggedInNavbar from "../components/navigation/LoggedInNavbar";
 // files
@@ -33,6 +34,7 @@ export default function LoggedInRoutes() {
             element={<AdminCategorySubItem />}
           />
         )}
+        <Route path="*" element={<Error404 />} />
       </Routes>
     </div>
   );
